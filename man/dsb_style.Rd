@@ -15,3 +15,6 @@ A CVI compliant plot
 \description{
 This function adds a DSB compliant theme to ggplot figures. It can be added at the end of your ggplot syntax.
 }
+\author{
+Jeppe Vierø
+}
