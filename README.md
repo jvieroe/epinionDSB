@@ -17,6 +17,7 @@ You can install the development version from
 
 ``` r
 # install.packages("devtools")
+library(devtools)
 devtools::install_github("jvieroe/epinionDSB")
 ```
 
