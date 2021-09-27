@@ -56,7 +56,18 @@ mtcars$hex_code = dsb_colors$hex_codes
 mtcars$id <- as.factor(seq(1:nrow(mtcars)))
 
 ggplot(mtcars, aes(x = wt,
-                   y = mpg)) +
-  geom_point(aes(color = id),
-             size = 5) +
+                   y = mpg,
+                   color = factor(am))) +
+  geom_point(size = 3) +
+  facet_wrap(~ vs) +
+  dsb_style() +
   scale_color_manual(values = mtcars$hex_code)
+
+ggplot(mtcars, aes(x = wt,
+                   y = mpg,
+                   color = factor(carb))) +
+  geom_point(size = 5) +
+  facet_wrap(~ vs)
+  dsb_style() +
+  scale_color_manual(values = mtcars$hex_code)
+mtcars
