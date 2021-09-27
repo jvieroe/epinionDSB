@@ -6,7 +6,7 @@
 #' @author Jeppe Vierø
 #' @export
 
-scale_fill_dsb <- function(palette = "main",
+scale_fill_dsb <- function(palette = "two",
                            discrete = TRUE,
                            reverse = FALSE,
                            ...) {

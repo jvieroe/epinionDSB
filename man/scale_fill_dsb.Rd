@@ -4,7 +4,7 @@
 \alias{scale_fill_dsb}
 \title{Use a DSB styled color palette for your ggplot2 plots}
 \usage{
-scale_fill_dsb(palette = "main", discrete = TRUE, reverse = FALSE, ...)
+scale_fill_dsb(palette = "two", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{x}
