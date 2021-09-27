@@ -36,7 +36,6 @@ dsb_colors <- tibble::tibble(
     "20 78 54"
   ))
 
-
 # ----- Pull out RGB-codes
 rgb_codes <- dsb_colors$rgb
 
@@ -44,30 +43,56 @@ rgb_codes <- dsb_colors$rgb
 dsb_colors$hex_codes <- sapply(strsplit(rgb_codes, " "), function(x)
   rgb(x[1], x[2], x[3], maxColorValue=255))
 
-
 # ----- Upload data to GitHub
 usethis::use_data(dsb_colors,
                   overwrite = TRUE)
 
 
+# ----- Create named palette of HEX codes
+dsb_cols <- dsb_colors %>%
+  select(
+    c(name,
+      hex_codes)
+    ) %>%
+  tibble::deframe()
+
+
+# ----- Upload data to GitHub
+usethis::use_data(dsb_cols,
+                  overwrite = TRUE)
+
+
 # ----- Try out the colors
-mtcars <- mtcars[1:nrow(dsb_colors),]
-mtcars$hex_code = dsb_colors$hex_codes
-mtcars$id <- as.factor(seq(1:nrow(mtcars)))
+# mtcars <- mtcars[1:nrow(dsb_colors),]
+# mtcars$hex_code = dsb_colors$hex_codes
+# mtcars$id <- as.factor(seq(1:nrow(mtcars)))
+
+library(epinionR)
+
+epi_cols()
+epi_cols("Dark Blue")
 
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
-                   color = factor(am))) +
+                   color = factor(gear))) +
+  geom_point(size = 5) +
+  facet_wrap(~ vs) +
+  dsb_style() +
+  epinion_color(reverse = T, discrete = T)
+
+ggplot(mtcars, aes(x = wt,
+                   y = mpg,
+                   color = factor(drat))) +
   geom_point(size = 3) +
   facet_wrap(~ vs) +
   dsb_style() +
-  scale_color_manual(values = mtcars$hex_code)
+  epinion_color()
+
 
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
-                   color = factor(carb))) +
+                   color = drat)) +
   geom_point(size = 5) +
-  facet_wrap(~ vs)
+  facet_wrap(~ vs) +
   dsb_style() +
-  scale_color_manual(values = mtcars$hex_code)
-mtcars
+  epinion_color(reverse = T, discrete = F)
