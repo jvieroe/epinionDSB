@@ -6,9 +6,9 @@
 #' @author Jeppe Vierø
 #' @export
 
-color_dsb_c <- function(palette = "continuous",
-                        reverse = FALSE,
-                        ...) {
+colour_dsb_c <- function(palette = "continuous",
+                         reverse = FALSE,
+                         ...) {
 
   pal <- dsb_pal(palette = palette, reverse = reverse)
 

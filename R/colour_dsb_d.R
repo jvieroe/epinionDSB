@@ -6,9 +6,9 @@
 #' @author Jeppe Vierø
 #' @export
 
-color_dsb_d <- function(palette = "two",
-                        reverse = FALSE,
-                        ...) {
+colour_dsb_d <- function(palette = "two",
+                         reverse = FALSE,
+                         ...) {
 
   pal <- dsb_pal(palette = palette, reverse = reverse)
 

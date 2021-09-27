@@ -6,10 +6,10 @@
 #' @author Jeppe Vierø
 #' @export
 
-color_dsb <- function(palette = "two",
-                              discrete = TRUE,
-                              reverse = FALSE,
-                              ...) {
+colour_dsb <- function(palette = "two",
+                       discrete = TRUE,
+                       reverse = FALSE,
+                       ...) {
 
   if (discrete) {
 
@@ -17,10 +17,10 @@ color_dsb <- function(palette = "two",
 
     discrete_scale("colour", paste0("dsb_", palette), palette = pal, ...)
 
-    } else {
+  } else {
 
-      scale_color_gradientn(colours = pal(256), ...)
+    scale_color_gradientn(colours = pal(256), ...)
 
-    }
+  }
 
 }
