@@ -83,27 +83,9 @@ Above, I get the standard colors in `ggplot2` because `aes(color =
 factor(am))` was not followed by a color specification. We could
 manually add colors as specified by *[the DSB Design
 Manual](https://github.com/jvieroe/epinionDSB/blob/main/data/DSB_graf-farver.pdf)*
-(DSBDM). This is a tedious process, however, and any changes to the CVI
-would involve a lot of manual changes in our `ggplot2` syntax.
-
-The `epinionDSB` package provides access to the color palette in the
-DSBDM and for readily used color palettes.
-
-Below, we get the HEX codes for…
-
-``` r
-# ... the classic DSB red
-dsb_colvec("DSB_Red")
-#>   DSB_Red 
-#> "#B41730"
-```
-
-``` r
-# ... a selection of colors
-dsb_colvec("DSB_Red", "DSB_DarkGrey", "DSB_DarkGreen")
-#>       DSB_Red  DSB_DarkGrey DSB_DarkGreen 
-#>     "#B41730"     "#747474"     "#144E36"
-```
+(DSBDM). The `epinionDSB` package provides access to the color palette
+in the DSBDM and for readily used color palettes. Specifically, the
+`dsb_colvec` function extracts HEX codes by the color names.
 
 ``` r
 # ... all DSB colors
@@ -114,7 +96,39 @@ dsb_colvec()
 #>      "#6E3C6E"      "#28767E"      "#41BDBF"      "#747474"      "#88C988" 
 #>      DSB_Green  DSB_DarkGreen 
 #>      "#1CA645"      "#144E36"
+# a selection of colors
+dsb_colvec("DSB_Red", "DSB_DarkBlue")
+#>      DSB_Red DSB_DarkBlue 
+#>    "#B41730"    "#00233C"
 ```
+
+We can use these in our `ggplot2` syntax:
+
+``` r
+# ... a selection of colors
+ggplot(mtcars, aes(x = wt,
+                   y = mpg,
+                   color = factor(am))) +
+  geom_point(size = 3) +
+  facet_wrap(~ vs) +
+  dsb_style() +
+  scale_color_manual(values = c("#B41730", "#00233C"))
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="75%" style="display: block; margin: auto;" />
+
+Great\! This is **much** more in line with DSB’s visual identity. This
+is a tedious process, however, and any changes to the CVI would involve
+a lot of manual changes in our accumulated `ggplot2` syntax.
+
+To provide a more verbose alternative, the `epinionDSB` contains
+out-of-the-box syntax to provide our `ggplot2` figures with a color
+palette consisting of the colors in the DSBDM:
+
+  - `color_dsb_d`: x
+  - `color_dsb_c`: y
+  - `fill_dsb_d`: x
+  - `fill_dsb_c`: y
 
 ### 
 
