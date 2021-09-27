@@ -12,14 +12,8 @@ visualizations using the `ggplot2` package
 
 ## Installation
 
-You can install the released version of epinionDSB from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("epinionDSB")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
