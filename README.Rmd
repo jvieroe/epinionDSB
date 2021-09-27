@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 
 The goal of epinionDSB is to TEXT TEXT
 
+
 ## Installation
 
 You can install the released version of epinionDSB from [CRAN](https://CRAN.R-project.org) with:
