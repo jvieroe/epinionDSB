@@ -37,7 +37,7 @@ The ```epinionDSB::dsb_style()``` function adds a tailormade theme to your ```gg
 * allows you to efficiently align visual styles and apply these across the board by altering the content of the ```dsb_style()``` function itself
 
 ### Example: ```dsb_style()```
-```{r example}
+```{r example, warning=F, message=F}
 library(tidyverse)
 library(epinionDSB)
 ```
