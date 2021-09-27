@@ -82,17 +82,8 @@ ggplot(mtcars, aes(x = wt,
 
 
 ## Color palettes
-``` {r}
+```{r colvec1, warning=F, message=F}
 # All DSB colors
-dsb_colvec()
+epinionDSB::dsb_colvec("DSB_Red")
 ```
 
-``` {r}
-# DSB_Red only
-dsb_colvec("DSB_Red")
-```
-
-``` {r}
-# DSB_Red and DSB_DarkBlue
-dsb_colvec("DSB_Red", "DSB_DarkBlue")
-```
