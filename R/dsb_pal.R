@@ -1,0 +1,18 @@
+#' Use a DSB styled color palette for your ggplot2 plots
+#'
+#' This function creates a DSB compliant color palette
+#' @param ... x
+#' @return ... z
+#' @author Jeppe Vierø
+#' @export
+
+dsb_pal <- function(palette = "main",
+                    reverse = FALSE, ...) {
+
+  pal <- drsimonj_palettes[[palette]]
+
+  if (reverse) pal <- rev(pal)
+
+  colorRampPalette(pal, ...)
+
+}

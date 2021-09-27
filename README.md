@@ -79,9 +79,29 @@ ggplot(mtcars, aes(x = wt,
 
 ## Color palettes
 
+Below, we get the HEX codes for…
+
 ``` r
-# All DSB colors
+# ... the classic DSB red
 dsb_colvec("DSB_Red")
 #>   DSB_Red 
 #> "#B41730"
+```
+
+``` r
+# ... a selection of colors
+dsb_colvec("DSB_Red", "DSB_DarkGrey", "DSB_DarkGreen")
+#>       DSB_Red  DSB_DarkGrey DSB_DarkGreen 
+#>     "#B41730"     "#747474"     "#144E36"
+```
+
+``` r
+# ... all DSB colors
+dsb_colvec()
+#>        DSB_Red   DSB_DarkBlue  DSB_LightBlue     DSB_Orange  DSB_LightGrey 
+#>      "#B41730"      "#00233C"      "#5382B6"      "#DF652C"      "#A5A5A5" 
+#>     DSB_Purple       DSB_Teal   DSB_Turqoise   DSB_DarkGrey DSB_LightGreen 
+#>      "#6E3C6E"      "#28767E"      "#41BDBF"      "#747474"      "#88C988" 
+#>      DSB_Green  DSB_DarkGreen 
+#>      "#1CA645"      "#144E36"
 ```

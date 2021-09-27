@@ -82,8 +82,20 @@ ggplot(mtcars, aes(x = wt,
 
 
 ## Color palettes
-```{r colvec1, warning=F, message=F}
-# All DSB colors
+
+Below, we get the HEX codes for...
+
+```{r warning=F, message=F}
+# ... the classic DSB red
 dsb_colvec("DSB_Red")
 ```
 
+```{r warning=F, message=F}
+# ... a selection of colors
+dsb_colvec("DSB_Red", "DSB_DarkGrey", "DSB_DarkGreen")
+```
+
+```{r warning=F, message=F}
+# ... all DSB colors
+dsb_colvec()
+```
