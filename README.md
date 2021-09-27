@@ -5,8 +5,6 @@
 ```{r echo = FALSE, fig.show = TRUE}
 ggplot(mtcars, aes(x = wt,
                    y = mpg)) +
-  geom_point(aes(color = id),
-             size = 5) +
-  scale_color_manual(values = mtcars$hex_code)
+  geom_point(aes(color = cyl)
 ```
 
