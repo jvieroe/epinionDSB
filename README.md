@@ -41,7 +41,10 @@ library(epinionDSB)
 ```
 
 The `dsb_style()` function does not impact the `aes()` of your
-`geom_*()`
+`geom_*()`, only the `ggplot2::theme()`. The only argument taken by
+`dsb_style` (at the time of writing) is the `legend` option specifying
+whether a legend is included and defaulting to `TRUE` (with
+`legend.position` defaulting to `"right"`)
 
 ``` r
 ggplot(mtcars, aes(x = wt,
@@ -53,6 +56,21 @@ ggplot(mtcars, aes(x = wt,
 ```
 
 <img src="man/figures/README-cars-1.png" width="75%" style="display: block; margin: auto;" />
+
+Note that all `ggplot2::theme()` settings inherent in `dsb_style()` can
+be overwritten by adding `theme()` elements after `dsb_style()`:
+
+``` r
+ggplot(mtcars, aes(x = wt,
+                   y = mpg,
+                   color = factor(am))) +
+  geom_point(size = 3) +
+  facet_wrap(~ vs) +
+  dsb_style() +
+  theme(legend.position = "bottom")
+```
+
+<img src="man/figures/README-cars2-1.png" width="75%" style="display: block; margin: auto;" />
 
 <!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>. -->
 
