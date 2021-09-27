@@ -24,3 +24,22 @@ scale_color_dsb <- function(palette = "two",
     }
 
 }
+
+scale_colour_dsb <- function(palette = "two",
+                            discrete = TRUE,
+                            reverse = FALSE,
+                            ...) {
+
+  pal <- dsb_pal(palette = palette, reverse = reverse)
+
+  if (discrete) {
+
+    discrete_scale("colour", paste0("dsb_", palette), palette = pal, ...)
+
+  } else {
+
+    scale_color_gradientn(colours = pal(256), ...)
+
+  }
+
+}

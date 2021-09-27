@@ -99,3 +99,12 @@ dsb_colvec("DSB_Red", "DSB_DarkGrey", "DSB_DarkGreen")
 # ... all DSB colors
 dsb_colvec()
 ```
+
+
+###
+
+```{r warning=F, message=F}
+# ... all DSB colors
+dsb_palettes
+```
+
