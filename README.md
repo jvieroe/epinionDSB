@@ -7,7 +7,7 @@
 
 <!-- badges: end -->
 
-The goal of epinionDSB is to provide
+The goal of epinionDSB is to TEXT TEXT
 
 ## Installation
 
@@ -28,7 +28,6 @@ devtools::install_github("jvieroe/epinionDSB")
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
-
 
 ``` r
 library(epinionDSB)
