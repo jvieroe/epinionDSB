@@ -20,9 +20,9 @@ You can install the development version from
 devtools::install_github("jvieroe/epinionDSB")
 ```
 
-## Customized `ggplot2` styles
+## Readymade `ggplot2` style
 
-This is a basic example which shows you how to solve a common problem:
+The `epinionDSB::dsb_style()` function
 
 ``` r
 library(epinionDSB)
