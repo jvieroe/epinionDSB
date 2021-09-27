@@ -79,6 +79,13 @@ ggplot(mtcars, aes(x = wt,
 
 ## Color palettes
 
+Above, I get the standard colors in `ggplot2` because `aes(color =
+factor(am))` was not followed by a color specification. We could
+manually add colors as specified by *[the DSB Design
+Manual](https://github.com/jvieroe/epinionDSB/blob/main/data/DSB_graf-farver.pdf)*.
+This is a tedious process, however, and any changes to the CVI would
+involve a lot of manual changes in our `ggplot2` syntax.
+
 Below, we get the HEX codes for…
 
 ``` r
@@ -133,5 +140,9 @@ dsb_palettes
 #>     DSB_Purple       DSB_Teal   DSB_Turqoise   DSB_DarkGrey DSB_LightGreen 
 #>      "#6E3C6E"      "#28767E"      "#41BDBF"      "#747474"      "#88C988" 
 #>      DSB_Green  DSB_DarkGreen 
-#>      "#1CA645"      "#144E36"
+#>      "#1CA645"      "#144E36" 
+#> 
+#> $continuous
+#> DSB_Orange    DSB_Red 
+#>  "#DF652C"  "#B41730"
 ```

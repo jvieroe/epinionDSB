@@ -83,6 +83,10 @@ ggplot(mtcars, aes(x = wt,
 
 ## Color palettes
 
+Above, I get the standard colors in ```ggplot2``` because ```aes(color = factor(am))``` was not followed by a color specification. We could manually add colors as specified by *[the DSB Design Manual](https://github.com/jvieroe/epinionDSB/blob/main/data/DSB_graf-farver.pdf)*. This is a tedious process, however, and any changes to the CVI would involve a lot of manual changes in our ```ggplot2``` syntax.
+
+
+
 Below, we get the HEX codes for...
 
 ```{r warning=F, message=F}
