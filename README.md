@@ -20,7 +20,7 @@ You can install the development version from
 devtools::install_github("jvieroe/epinionDSB")
 ```
 
-## Example
+## Customized `ggplot2` styles
 
 This is a basic example which shows you how to solve a common problem:
 
