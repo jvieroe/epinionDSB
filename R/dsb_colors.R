@@ -1,22 +1,19 @@
 #' Use a DSB styled color palette for your ggplot2 graphics
 #'
-#' This function adds a DSB compliant theme to ggplot figures. It can be added at the end of your ggplot syntax.
-#' @param legend a logical value indicating whether a legend is included. Defaults to TRUE.
-#' @return A CVI compliant plot
+#' This function extract DSB compliant colors (in HEX codes) by their name
+#' @param ... takes as input the name of the color(s) needed
+#' @return the corresponding HEX code
 #' @author Jeppe Vierø
 #' @export
 
-drsimonj_cols <- function(...) {
+dsb_colvec <- function(...) {
 
   cols <- c(...)
 
   if (is.null(cols))
 
-    return (drsimonj_colors)
+    return (dsb_cols)
 
-  drsimonj_colors[cols]
+  dsb_cols[cols]
 
 }
-
-
-
