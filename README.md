@@ -83,8 +83,12 @@ Above, I get the standard colors in `ggplot2` because `aes(color =
 factor(am))` was not followed by a color specification. We could
 manually add colors as specified by *[the DSB Design
 Manual](https://github.com/jvieroe/epinionDSB/blob/main/data/DSB_graf-farver.pdf)*
-(DSBDM). The `epinionDSB` package provides access to the color palette
-in the DSBDM and for readily used color palettes. Specifically, the
+(DSBDM).
+
+### Extract HEX codes using `dsb_colvec()`
+
+The `epinionDSB` package provides access to the color palette in the
+DSBDM and for readily used color palettes. Specifically, the
 `dsb_colvec` function extracts HEX codes by the color names.
 
 ``` r
@@ -112,7 +116,7 @@ ggplot(mtcars, aes(x = wt,
   geom_point(size = 3) +
   facet_wrap(~ vs) +
   dsb_style() +
-  scale_color_manual(values = c("#B41730", "#00233C"))
+  scale_colour_manual(values = c("#B41730", "#00233C"))
 ```
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="75%" style="display: block; margin: auto;" />
@@ -120,6 +124,8 @@ ggplot(mtcars, aes(x = wt,
 Great\! This is **much** more in line with DSB’s visual identity. This
 is a tedious process, however, and any changes to the CVI would involve
 a lot of manual changes in our accumulated `ggplot2` syntax.
+
+### Apply ready-made color palettes
 
 To provide a more verbose alternative, the `epinionDSB` contains
 out-of-the-box syntax to provide our `ggplot2` figures with a color
@@ -133,6 +139,43 @@ palette consisting of the colors in the DSBDM:
     or `character` variable
   - `fill_dsb_c`: to use with the `aes(fill = x)`, where x is a
     `numeric` or `integer` variable
+
+Note that, similarly to `ggplot2::scale_color_*()`, `color_dsb_*` is
+**not** sensitive to American/English spelling and `colour_dsb_*` works
+identically.
+
+Let’s check it out
+
+``` r
+library(gridExtra)
+
+# discrete variable in aes()
+p1 <-
+  ggplot(mtcars, aes(x = wt,
+                   y = mpg,
+                   color = factor(am))) +
+  geom_point(size = 3) +
+  facet_wrap(~ vs) +
+  dsb_style() +
+  color_dsb_d(palette = "two", reverse = F)
+
+# continuous variable in aes()
+p2 <-
+  ggplot(mtcars, aes(x = wt,
+                   y = mpg,
+                   color = disp)) +
+  geom_point(size = 3) +
+  facet_wrap(~ vs) +
+  dsb_style() +
+  color_dsb_c(reverse = F)
+
+grid.arrange(
+  p1, p2,
+  ncol = 1
+  )
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="75%" style="display: block; margin: auto;" />
 
 ### 
 
