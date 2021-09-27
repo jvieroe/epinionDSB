@@ -33,7 +33,7 @@ The `epinionDSB::dsb_style()` function adds a tailormade theme to your
     the board by altering the content of the `dsb_style()` function
     itself
 
-### Example: `dsb_style()`
+### Example
 
 ``` r
 library(tidyverse)
