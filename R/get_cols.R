@@ -62,6 +62,11 @@ usethis::use_data(dsb_cols,
                   overwrite = TRUE)
 
 
+# https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2
+
+
+
+
 # ----- Try out the colors
 # mtcars <- mtcars[1:nrow(dsb_colors),]
 # mtcars$hex_code = dsb_colors$hex_codes
