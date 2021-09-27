@@ -9,7 +9,7 @@
 dsb_pal <- function(palette = "main",
                     reverse = FALSE, ...) {
 
-  pal <- drsimonj_palettes[[palette]]
+  pal <- dsb_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
 
