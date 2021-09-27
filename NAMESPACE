@@ -3,3 +3,5 @@
 export(dsb_colvec)
 export(dsb_pal)
 export(dsb_style)
+export(scale_color_dsb)
+export(scale_fill_dsb)

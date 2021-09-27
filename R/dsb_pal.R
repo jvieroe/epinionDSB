@@ -7,7 +7,8 @@
 #' @export
 
 dsb_pal <- function(palette = "main",
-                    reverse = FALSE, ...) {
+                    reverse = FALSE,
+                    ...) {
 
   pal <- dsb_palettes[[palette]]
 
