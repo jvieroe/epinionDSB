@@ -79,3 +79,20 @@ ggplot(mtcars, aes(x = wt,
 
 
 <!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN. -->
+
+
+## Color palettes
+``` {r}
+# All DSB colors
+dsb_colvec()
+```
+
+``` {r}
+# DSB_Red only
+dsb_colvec("DSB_Red")
+```
+
+``` {r}
+# DSB_Red and DSB_DarkBlue
+dsb_colvec("DSB_Red", "DSB_DarkBlue")
+```
