@@ -51,7 +51,7 @@ ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
   geom_point(size = 3) +
-  facet_wrap(~ cyl) +
+  facet_wrap(~ vs) +
   dsb_style()
 
 ```
