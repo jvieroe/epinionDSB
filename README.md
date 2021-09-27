@@ -22,7 +22,15 @@ devtools::install_github("jvieroe/epinionDSB")
 
 ## Readymade `ggplot2` style
 
-The `epinionDSB::dsb_style()` function
+The `epinionDSB::dsb_style()` function adds a tailormade theme to your
+`ggplot2` graphics. This allows for a coherent Corporate Visual Identity
+(CVI) for Epinion consultants working with DSB. Importantly, the
+`dsb_style()` function
+
+  - xx
+  - xxx
+
+<!-- end list -->
 
 ``` r
 library(epinionDSB)
