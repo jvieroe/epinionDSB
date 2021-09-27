@@ -36,9 +36,10 @@ The ```epinionDSB::dsb_style()``` function adds a tailormade theme to your ```gg
 * serves as a time-saver when producing many visualizations, as compared to specifying ```ggplot2::theme()``` in each plot
 * allows you to efficiently align visual styles and apply these across the board by altering the content of the ```dsb_style()``` function itself
 
+### Example: ```dsb_style()```
 ```{r example}
+library(tidyverse)
 library(epinionDSB)
-## basic example code
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
