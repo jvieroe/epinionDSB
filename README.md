@@ -1,6 +1,6 @@
 # epinionDSB
 
-*epinionDSB* provides easy-to-use functions for creating visual content ```ggplot2``` package
+The ```epinionDSB``` package provides easy-to-use functions for creating visual content ```ggplot2``` package
 
 ```{r echo = FALSE, eval = TRUE, fig.show = TRUE}
 library(tidyverse)
