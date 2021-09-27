@@ -9,8 +9,10 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "50%",
+  fig.align = "center"
 )
+#knitr::opts_chunk$set(fig.width=12, fig.height=8) 
 ```
 
 # epinionDSB
