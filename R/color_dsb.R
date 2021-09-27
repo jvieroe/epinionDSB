@@ -6,14 +6,14 @@
 #' @author Jeppe Vierø
 #' @export
 
-scale_color_dsb <- function(palette = "two",
-                            discrete = TRUE,
-                            reverse = FALSE,
-                            ...) {
-
-  pal <- dsb_pal(palette = palette, reverse = reverse)
+color_dsb <- function(palette = "two",
+                              discrete = TRUE,
+                              reverse = FALSE,
+                              ...) {
 
   if (discrete) {
+
+    pal <- dsb_pal(palette = palette, reverse = reverse)
 
     discrete_scale("colour", paste0("dsb_", palette), palette = pal, ...)
 
@@ -25,14 +25,14 @@ scale_color_dsb <- function(palette = "two",
 
 }
 
-scale_colour_dsb <- function(palette = "two",
-                            discrete = TRUE,
-                            reverse = FALSE,
-                            ...) {
-
-  pal <- dsb_pal(palette = palette, reverse = reverse)
+colour_dsb <- function(palette = "two",
+                       discrete = TRUE,
+                       reverse = FALSE,
+                       ...) {
 
   if (discrete) {
+
+    pal <- dsb_pal(palette = palette, reverse = reverse)
 
     discrete_scale("colour", paste0("dsb_", palette), palette = pal, ...)
 
