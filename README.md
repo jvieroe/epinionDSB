@@ -125,10 +125,14 @@ To provide a more verbose alternative, the `epinionDSB` contains
 out-of-the-box syntax to provide our `ggplot2` figures with a color
 palette consisting of the colors in the DSBDM:
 
-  - `color_dsb_d`: x
-  - `color_dsb_c`: y
-  - `fill_dsb_d`: x
-  - `fill_dsb_c`: y
+  - `color_dsb_d`: to use with the `aes(color = x)`, where x is a
+    `factor` or `character` variable
+  - `color_dsb_c`: to use with the `aes(color = x)`, where x is a
+    `numeric` or `integer` variable
+  - `fill_dsb_d`: to use with the `aes(fill = x)`, where x is a `factor`
+    or `character` variable
+  - `fill_dsb_c`: to use with the `aes(fill = x)`, where x is a
+    `numeric` or `integer` variable
 
 ### 
 
