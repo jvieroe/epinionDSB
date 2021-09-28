@@ -14,6 +14,6 @@ dsb_pal <- function(palette = "main",
 
   if (reverse) pal <- rev(pal)
 
-  colorRampPalette(pal, ...)
+  #colorRampPalette(pal, ...)
 
 }
