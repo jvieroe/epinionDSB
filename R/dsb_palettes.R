@@ -1,18 +1,16 @@
 dsb_palettes <- list(
 
-  `red`  = dsb_colvec("DSB_Red"),
-
-  `main`  = dsb_colvec("DSB_Red", "DSB_Green", "DSB_Orange",
-                       "DSB_Turqoise", "DSB_DarkGrey",
-                       "DSB_Purple", "DSB_Teal", "DSB_DarkBlue"),
+  `one`  = dsb_colvec("DSB_Red"),
 
   `two`  = dsb_colvec("DSB_Red", "DSB_DarkBlue"),
 
   `three`   = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange"),
 
-  `four` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_LightGrey"),
+  `main`  = dsb_colvec("DSB_Red", "DSB_Green", "DSB_Orange", "DSB_Turqoise", "DSB_DarkGrey", "DSB_Purple", "DSB_Teal", "DSB_DarkBlue"),
 
-  `full`  = dsb_colvec(),
+  #`four` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_LightGrey"),
+
+  #`full`  = dsb_colvec(),
 
   `reds`  = dsb_colvec("DSB_Orange", "DSB_Red"),
 
