@@ -159,8 +159,37 @@ grid.arrange(
 * ```reverse```, a logical value indicating the scale is reversed (default is ```FALSE```)
 
 
+**Let's try both out!**
+
+```{r warning=F, message=F}
+# continuous variable in aes()
+p1 <- 
+  ggplot(mtcars, aes(x = wt,
+                         y = mpg,
+                         color = disp)) +
+  geom_point(size = 3) +
+  facet_wrap(~ vs) +
+  dsb_style() +
+  color_dsb_c(palette = "greens")
+
+p2 <- 
+  ggplot(mtcars, aes(x = wt,
+                         y = mpg,
+                         color = disp)) +
+  geom_point(size = 3) +
+  facet_wrap(~ vs) +
+  dsb_style() +
+  color_dsb_c(palette = "greens",
+              reverse = TRUE)
+
+grid.arrange(
+  p1, p2,
+  ncol = 1
+  )
+
+```
+
+
 Notice however that ```color_dsb_c()``` and ```color_dsb_d()``` inherently calls ```ggplot2::scale_colour_gradientn()``` and ```ggplot2::discrete_scale()```, respectively. For that reason, additional arguments such as ```guide``` also apply See [```ggplot2::scale_colour_gradientn()```](https://tidyverse.github.io/ggplot2-docs/reference/scale_gradient.html "xxx") and [```ggplot2::discrete_scale()```](https://ggplot2.tidyverse.org/reference/discrete_scale.html "xxx") for details on additional arguments.
-
-
 
 

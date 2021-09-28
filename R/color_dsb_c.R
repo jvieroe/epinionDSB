@@ -6,7 +6,7 @@
 #' @author Jeppe Vierø
 #' @export
 
-color_dsb_c <- function(palette = "continuous",
+color_dsb_c <- function(palette = "reds",
                         reverse = FALSE,
                         ...) {
 
