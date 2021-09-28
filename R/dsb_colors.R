@@ -59,8 +59,10 @@ dsb_cols <- tibble::deframe(dsb_cols)
 
 # ----- Upload data to GitHub
 getwd()
-usethis::use_data(dsb_cols,
-                  overwrite = TRUE)
+save(dsb_cols,
+     file = "data/dsb_cols.rda")
+# usethis::use_data(dsb_cols,
+#                   overwrite = TRUE)
 
 
 # https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2
