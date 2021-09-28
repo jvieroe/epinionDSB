@@ -152,8 +152,8 @@ library(gridExtra)
 # discrete variable in aes()
 p1 <-
   ggplot(mtcars, aes(x = wt,
-                   y = mpg,
-                   color = factor(am))) +
+                     y = mpg,
+                     color = factor(am))) +
   geom_point(size = 3) +
   facet_wrap(~ vs) +
   dsb_style() +
@@ -162,8 +162,8 @@ p1 <-
 # continuous variable in aes()
 p2 <-
   ggplot(mtcars, aes(x = wt,
-                   y = mpg,
-                   color = disp)) +
+                     y = mpg,
+                     color = disp)) +
   geom_point(size = 3) +
   facet_wrap(~ vs) +
   dsb_style() +
