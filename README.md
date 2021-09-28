@@ -157,7 +157,7 @@ p1 <-
   geom_point(size = 3) +
   facet_wrap(~ vs) +
   dsb_style() +
-  color_dsb_d(palette = "two", reverse = F)
+  color_dsb_d()
 
 # continuous variable in aes()
 p2 <-
@@ -167,7 +167,7 @@ p2 <-
   geom_point(size = 3) +
   facet_wrap(~ vs) +
   dsb_style() +
-  color_dsb_c(reverse = F)
+  color_dsb_c()
 
 grid.arrange(
   p1, p2,
@@ -176,6 +176,22 @@ grid.arrange(
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="75%" style="display: block; margin: auto;" />
+
+`color_dsb_*()` primarily takes two arguments as inputs:
+
+  - `palette`, which allows you to choose your color palette. Call
+    `epinionDSB::dsb_palettes` for a complete overview
+  - `reverse`, a logical value indicating the scale is reversed (default
+    is `FALSE`)
+
+Notice however that `color_dsb_c()` and `color_dsb_d()` inherently calls
+`ggplot2::scale_colour_gradientn()` and `ggplot2::discrete_scale()`,
+respectively. For that reason, additional arguments such as `guide` also
+apply See
+[`ggplot2::scale_colour_gradientn()`](https://tidyverse.github.io/ggplot2-docs/reference/scale_gradient.html "xxx")
+and
+[`ggplot2::discrete_scale()`](https://ggplot2.tidyverse.org/reference/discrete_scale.html "xxx")
+for details on additional arguments.
 
 ### 
 
