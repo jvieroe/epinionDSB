@@ -6,7 +6,7 @@
 #' @author Jeppe Vierø
 #' @export
 
-fill_dsb_d <- function(palette = "main",
+fill_dsb_d <- function(palette = "three",
                        reverse = FALSE,
                        ...) {
 
