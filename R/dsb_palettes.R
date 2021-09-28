@@ -1,28 +1,53 @@
 dsb_palettes <- list(
 
+  # `one` = dsb_colvec("DSB_Red"),
+  #
+  # `two` = dsb_colvec("DSB_Red", "DSB_DarkBlue"),
+  #
+  # `three` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange"),
+  #
+  # `four` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen"),
+  #
+  # `five` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple"),
+  #
+  # `six` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal"),
+  #
+  # `seven` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey"),
+  #
+  # `eight` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue"),
+  #
+  # `nine` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen"),
+  #
+  # `ten` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise"),
+  #
+  # `eleven` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green"),
+  #
+  # `twelve` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green", "DSB_LightGrey"),
+
   `one` = dsb_colvec("DSB_Red"),
 
   `two` = dsb_colvec("DSB_Red", "DSB_DarkBlue"),
 
-  `three` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange"),
+  `three` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue"),
 
-  `four` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen"),
+  `four` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkGreen", "DSB_DarkBlue"),
 
-  `five` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple"),
+  `five` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple"),
 
-  `six` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal"),
+  `six` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal"),
 
-  `seven` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey"),
+  `seven` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey"),
 
-  `eight` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue"),
+  `eight` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue"),
 
-  `nine` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen"),
+  `nine` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen"),
 
-  `ten` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise"),
+  `ten` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise"),
 
-  `eleven` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green"),
+  `eleven` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green"),
 
-  `twelve` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green", "DSB_LightGrey"),
+  `twelve` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green", "DSB_LightGrey"),
+
 
   #`main` = dsb_colvec("DSB_Red", "DSB_Green", "DSB_Orange", "DSB_Turqoise", "DSB_DarkGrey", "DSB_Purple", "DSB_Teal", "DSB_DarkBlue"),
 
