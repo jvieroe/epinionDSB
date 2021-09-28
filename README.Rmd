@@ -163,10 +163,4 @@ Notice however that ```color_dsb_c()``` and ```color_dsb_d()``` inherently calls
 
 
 
-###
-
-```{r warning=F, message=F}
-# ... all DSB colors
-dsb_palettes
-```
 

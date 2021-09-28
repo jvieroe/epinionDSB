@@ -192,37 +192,3 @@ apply See
 and
 [`ggplot2::discrete_scale()`](https://ggplot2.tidyverse.org/reference/discrete_scale.html "xxx")
 for details on additional arguments.
-
-### 
-
-``` r
-# ... all DSB colors
-dsb_palettes
-#> $red
-#>   DSB_Red 
-#> "#B41730" 
-#> 
-#> $two
-#>      DSB_Red DSB_DarkBlue 
-#>    "#B41730"    "#00233C" 
-#> 
-#> $three
-#>      DSB_Red DSB_DarkBlue   DSB_Orange 
-#>    "#B41730"    "#00233C"    "#DF652C" 
-#> 
-#> $four
-#>       DSB_Red  DSB_DarkBlue    DSB_Orange DSB_LightGrey 
-#>     "#B41730"     "#00233C"     "#DF652C"     "#A5A5A5" 
-#> 
-#> $full
-#>        DSB_Red   DSB_DarkBlue  DSB_LightBlue     DSB_Orange  DSB_LightGrey 
-#>      "#B41730"      "#00233C"      "#5382B6"      "#DF652C"      "#A5A5A5" 
-#>     DSB_Purple       DSB_Teal   DSB_Turqoise   DSB_DarkGrey DSB_LightGreen 
-#>      "#6E3C6E"      "#28767E"      "#41BDBF"      "#747474"      "#88C988" 
-#>      DSB_Green  DSB_DarkGreen 
-#>      "#1CA645"      "#144E36" 
-#> 
-#> $continuous
-#> DSB_Orange    DSB_Red 
-#>  "#DF652C"  "#B41730"
-```
