@@ -49,16 +49,20 @@ dsb_colors$hex_codes <- sapply(strsplit(rgb_codes, " "), function(x)
 
 
 # ----- Create named palette of HEX codes
-dsb_cols <- dsb_colors %>%
-  select(
-    c(name,
-      hex_codes)
-  ) %>%
-  tibble::deframe()
+# dsb_cols <- dsb_colors %>%
+#   select(
+#     c(name,
+#       hex_codes)
+#   ) %>%
+#   tibble::deframe()
+dsb_cols <- dsb_colors
+rm(dsb_colors)
+dsb_cols <- dsb_cols[, c(1,3)]
+dsb_cols <- tibble::deframe(dsb_cols)
+
 
 
 # ----- Upload data to GitHub
-getwd()
 usethis::use_data(dsb_cols,
                   overwrite = TRUE)
 
