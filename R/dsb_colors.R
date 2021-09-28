@@ -1,10 +1,5 @@
-#' Extract HEX-codes and RGB-codes by color name
-#'
-#' This snippet defines a dataset of colors in the DSB Design Manual and provides their corresponding color codes in two formats:
-#' RGB and HEX.
-#' The code provided here is for transparency purposes only, the resulting data is provided in the data folder (dsb_colors.rda)
-#' @author Jeppe Vierø
-#' @export
+# This snippet defines a dataset of colors in the DSB Design Manual and provides their corresponding color codes in two formats
+# RGB and HEX
 
 # ----- Create a tibble based on the data in the DSB design manual
 dsb_colors <- tibble::tibble(
