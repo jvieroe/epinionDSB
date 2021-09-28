@@ -177,10 +177,15 @@ grid.arrange(
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="75%" style="display: block; margin: auto;" />
 
-`color_dsb_*()` primarily takes two arguments as inputs:
+`color_dsb_*()` and `fill_dsb_*()` primarily take two arguments as
+inputs:
 
   - `palette`, which allows you to choose your color palette. Call
     `epinionDSB::dsb_palettes` for a complete overview
+      - for `color_dsb_c()` and `fill_dsb_c()`, `palette` defaults to
+        `reds`
+      - for `color_dsb_d()` and `fill_dsb_d()`, `palette` defaults to
+        `main`
   - `reverse`, a logical value indicating the scale is reversed (default
     is `FALSE`)
 

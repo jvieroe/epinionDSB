@@ -6,7 +6,7 @@
 #' @author Jeppe Vierø
 #' @export
 
-color_dsb_d <- function(palette = "two",
+color_dsb_d <- function(palette = "main",
                         reverse = FALSE,
                         ...) {
 

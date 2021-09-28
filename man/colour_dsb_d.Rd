@@ -4,7 +4,7 @@
 \alias{colour_dsb_d}
 \title{Use a DSB styled color palette for your ggplot2 plots}
 \usage{
-colour_dsb_d(palette = "two", reverse = FALSE, ...)
+colour_dsb_d(palette = "main", reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{x}
