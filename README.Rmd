@@ -159,7 +159,7 @@ grid.arrange(
 * ```reverse```, a logical value indicating the scale is reversed (default is ```FALSE```)
 
 
-**Let's try both out!**
+__Let's try both out!__ 
 
 ```{r warning=F, message=F}
 # continuous variable in aes()
