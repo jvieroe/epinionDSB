@@ -217,8 +217,8 @@ grid.arrange(
 
 Notice however that `color_dsb_c()` and `color_dsb_d()` inherently calls
 `ggplot2::scale_colour_gradientn()` and `ggplot2::discrete_scale()`,
-respectively. For that reason, additional arguments such as `guide` also
-apply See
+respectively. For that reason, additional arguments, such as `guide`,
+also apply. See
 [`ggplot2::scale_colour_gradientn()`](https://tidyverse.github.io/ggplot2-docs/reference/scale_gradient.html "xxx")
 and
 [`ggplot2::discrete_scale()`](https://ggplot2.tidyverse.org/reference/discrete_scale.html "xxx")
