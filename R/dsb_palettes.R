@@ -24,7 +24,10 @@ dsb_palettes <- list(
 
 
 # ----- Upload data to GitHub
-usethis::use_data(dsb_palettes,
-                  overwrite = TRUE)
+getwd()
+save(dsb_palettes,
+     file = "data/dsb_palettes.rda")
+# usethis::use_data(dsb_palettes,
+#                   overwrite = TRUE)
 
 #dsb_colvec()
