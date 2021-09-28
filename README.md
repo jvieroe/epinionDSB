@@ -144,7 +144,7 @@ Note that, similarly to `ggplot2::scale_color_*()`, `color_dsb_*` is
 **not** sensitive to American/English spelling and `colour_dsb_*` works
 identically.
 
-Let’s check it out
+**Let’s check it out\!**
 
 ``` r
 library(gridExtra)
