@@ -19,7 +19,7 @@ dsb_pal_d <- function(palette = "main",
 
   function(n) {
 
-    if (n > 6) warning("Branded Color Palette only has 6 colors.")
+    if (n > 12) warning("The discrete color palette only has 12 colors.")
 
     if (n == 2) {
 
