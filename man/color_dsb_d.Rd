@@ -4,7 +4,13 @@
 \alias{color_dsb_d}
 \title{Use a DSB styled discrete color palette for your ggplot2 plots}
 \usage{
-color_dsb_d(palette = "main", reverse = FALSE, ...)
+color_dsb_d(
+  palette = "main",
+  primary = "DSB_Red",
+  other = "DSB_DarkBlue",
+  reverse = FALSE,
+  ...
+)
 }
 \arguments{
 \item{...}{x}

@@ -7,7 +7,11 @@ dsb_palettes <- list(
 
   `greens` = dsb_colvec("DSB_LightGreen", "DSB_Green", "DSB_DarkGreen"),
 
-  `teals` = dsb_colvec("DSB_Turqoise", "DSB_Teal"),
+  `teals` = dsb_colvec("DSB_Turqoise", "DSB_Teal")
+
+)
+
+epi_palettes <- list(
 
   `epiblue` = epi_colvec("Epi_WarmSand", "Epi_ClearBlue", "Epi_DarkBlue"),
 
@@ -63,6 +67,8 @@ dsb_palettes_d$epinion <- list(
 # ----- Upload data to GitHub
 getwd()
 save(dsb_palettes,
+     file = "data/dsb_palettes.rda")
+save(epi_palettes,
      file = "data/dsb_palettes.rda")
 save(dsb_palettes_d,
      file = "data/dsb_palettes_d.rda")
