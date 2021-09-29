@@ -6,16 +6,27 @@
 #' @author Jeppe Vierø
 #' @export
 
-colour_dsb_d <- function(palette = "main",
-                         reverse = FALSE,
-                         ...) {
+# colour_dsb_d <- function(palette = "main",
+#                          reverse = FALSE,
+#                          ...) {
+#
+#   pal <- dsb_palettes[[palette]]
+#
+#   if (reverse) pal <- rev(pal)
+#
+#   scale_color_manual(values = pal)
+#
+# }
 
-  pal <- dsb_palettes[[palette]]
 
-  if (reverse) pal <- rev(pal)
+colour_dsb_d <- function(...,
+                         values,
+                         aesthetics = "colour",
+                         breaks = waiver(),
+                         na.value = "grey50") {
 
-  scale_color_manual(values = pal)
+  manual_scale(aesthetics, values, breaks, ..., na.value = na.value)
 
-}
+  }
 
 

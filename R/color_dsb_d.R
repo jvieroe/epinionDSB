@@ -12,6 +12,6 @@ color_dsb_d <- function(palette = "three",
 
   pal <- dsb_pal(palette = palette, reverse = reverse)
 
-  discrete_scale("colour", paste0("dsb_", palette), palette = pal, ...)
+  discrete_scale("manual", paste0("dsb_", palette), palette = pal, ...) # colour
 
 }
