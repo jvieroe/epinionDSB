@@ -51,7 +51,7 @@ whether a legend is included and defaulting to `TRUE` (with
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style()
 ```
@@ -65,7 +65,7 @@ be overwritten by adding `theme()` elements after `dsb_style()`:
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   theme(legend.position = "bottom")
@@ -113,7 +113,7 @@ We can use these in our `ggplot2` syntax:
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   scale_colour_manual(values = c("#B41730", "#00233C"))
@@ -154,7 +154,7 @@ p1 <-
   ggplot(mtcars, aes(x = wt,
                      y = mpg,
                      color = factor(am))) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_d()
@@ -164,7 +164,7 @@ p2 <-
   ggplot(mtcars, aes(x = wt,
                      y = mpg,
                      color = disp)) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_c()
@@ -197,7 +197,7 @@ p1 <-
   ggplot(mtcars, aes(x = wt,
                          y = mpg,
                          color = disp)) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_c(palette = "greens")
@@ -206,7 +206,7 @@ p2 <-
   ggplot(mtcars, aes(x = wt,
                          y = mpg,
                          color = disp)) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_c(palette = "greens",

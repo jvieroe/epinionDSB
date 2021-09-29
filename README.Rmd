@@ -53,7 +53,7 @@ The ```dsb_style()``` function does not impact the ```aes()``` of your ```geom_*
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style()
 
@@ -67,7 +67,7 @@ Note that all ```ggplot2::theme()``` settings inherent in ```dsb_style()``` can 
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   theme(legend.position = "bottom")
@@ -103,7 +103,7 @@ We can use these in our ```ggplot2``` syntax:
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   scale_colour_manual(values = c("#B41730", "#00233C"))
@@ -132,7 +132,7 @@ p1 <-
   ggplot(mtcars, aes(x = wt,
                      y = mpg,
                      color = factor(am))) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_d()
@@ -142,7 +142,7 @@ p2 <-
   ggplot(mtcars, aes(x = wt,
                      y = mpg,
                      color = disp)) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_c()
@@ -169,7 +169,7 @@ p1 <-
   ggplot(mtcars, aes(x = wt,
                          y = mpg,
                          color = disp)) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_c(palette = "greens")
@@ -178,7 +178,7 @@ p2 <-
   ggplot(mtcars, aes(x = wt,
                          y = mpg,
                          color = disp)) +
-  geom_point(size = 3) +
+  geom_point(size = 5) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_c(palette = "greens",
