@@ -17,4 +17,3 @@ dsb_colvec <- function(...) {
   dsb_cols[cols]
 
 }
-

@@ -88,7 +88,7 @@ epinion_colors <- tibble::tibble(
   ))
 
 
-epinion_cols <- tibble::deframe(epinion_colors)
+epi_cols <- tibble::deframe(epinion_colors)
 
 rm(epinion_colors)
 
@@ -96,8 +96,8 @@ rm(epinion_colors)
 getwd()
 save(dsb_cols,
      file = "data/dsb_cols.rda")
-save(epinion_cols,
-     file = "data/epinion_cols.rda")
+save(epi_cols,
+     file = "data/epi_cols.rda")
 # usethis::use_data(dsb_cols,
 #                   overwrite = TRUE)
 

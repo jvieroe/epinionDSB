@@ -12,8 +12,8 @@ epi_colvec <- function(...) {
 
   if (is.null(cols))
 
-    return (epinion_cols)
+    return (epi_cols)
 
-  epinion_cols[cols]
+  epi_cols[cols]
 
 }
