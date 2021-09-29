@@ -58,46 +58,46 @@ dsb_cols <- tibble::deframe(dsb_cols)
 
 
 
-epinion_colors <- tibble::tibble(
-  name = c(
-    "Epi_Red",
-    "Epi_DarkBlue",
-    "Epi_WarmSand",
-    "Epi_DarkPurple",
-    "Epi_ClearBlue",
-    "Epi_LightDeepBlue",
-    "Epi_LightPurple",
-    "Epi_LightBlue",
-    "Epi_Green",
-    "Epi_LightGreen",
-    "Epi_Gold",
-    "Epi_LightGold"),
-  hex_codes = c(
-    "#E13C32",
-    "#0F283C",
-    "#E8E1D5",
-    "#641E3C",
-    "#233CA0",
-    "#68838B",
-    "#BA7384",
-    "#A7C7D7",
-    "#004337",
-    "#73A89A",
-    "#C18022",
-    "#EBC882"
-  ))
-
-
-epinion_cols <- tibble::deframe(epinion_colors)
-
-rm(epinion_colors)
+# epinion_colors <- tibble::tibble(
+#   name = c(
+#     "Epi_Red",
+#     "Epi_DarkBlue",
+#     "Epi_WarmSand",
+#     "Epi_DarkPurple",
+#     "Epi_ClearBlue",
+#     "Epi_LightDeepBlue",
+#     "Epi_LightPurple",
+#     "Epi_LightBlue",
+#     "Epi_Green",
+#     "Epi_LightGreen",
+#     "Epi_Gold",
+#     "Epi_LightGold"),
+#   hex_codes = c(
+#     "#E13C32",
+#     "#0F283C",
+#     "#E8E1D5",
+#     "#641E3C",
+#     "#233CA0",
+#     "#68838B",
+#     "#BA7384",
+#     "#A7C7D7",
+#     "#004337",
+#     "#73A89A",
+#     "#C18022",
+#     "#EBC882"
+#   ))
+#
+#
+# epinion_cols <- tibble::deframe(epinion_colors)
+#
+# rm(epinion_colors)
 
 # ----- Upload data to GitHub
 getwd()
 save(dsb_cols,
      file = "data/dsb_cols.rda")
-save(epinion_cols,
-     file = "data/epinion_cols.rda")
+# save(epinion_cols,
+#      file = "data/epinion_cols.rda")
 # usethis::use_data(dsb_cols,
 #                   overwrite = TRUE)
 
