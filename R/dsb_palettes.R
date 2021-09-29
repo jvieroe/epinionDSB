@@ -1,13 +1,25 @@
 # ----- Create list with continuous color palettes
 dsb_palettes <- list(
 
+  # DSB palettes
+
   `reds` = dsb_colvec("DSB_Orange", "DSB_Red"),
 
   `blues` = dsb_colvec("DSB_LightBlue", "DSB_DarkBlue"),
 
   `greens` = dsb_colvec("DSB_LightGreen", "DSB_Green", "DSB_DarkGreen"),
 
-  `teals` = dsb_colvec("DSB_Turqoise", "DSB_Teal")
+  `teals` = dsb_colvec("DSB_Turqoise", "DSB_Teal"),
+
+  # Epinion palettes
+
+  `epiblue` = epi_colvec("Epi_WarmSand", "Epi_ClearBlue", "Epi_DarkBlue"),
+
+  `epipurple` = epi_colvec("Epi_WarmSand", "Epi_LightPurple", "Epi_DarkPurple"),
+
+  `epigreen` = epi_colvec("Epi_WarmSand", "Epi_LightGreen", "Epi_Green"),
+
+  `epigold` = epi_colvec("Epi_WarmSand", "Epi_LightGold", "Epi_Gold")
 
 )
 
