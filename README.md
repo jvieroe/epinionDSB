@@ -228,3 +228,14 @@ also apply. See
 and
 [`ggplot2::discrete_scale()`](https://ggplot2.tidyverse.org/reference/discrete_scale.html "Discrete scale constructor")
 for details on additional arguments.
+
+# Acknowledgements
+
+  - The R Core Team for developing and maintaining the language
+  - Hadley Wickham ([hadley](https://github.com/hadley)), Thomas Lin
+    Pedersen ([thomasp85](https://github.com/thomasp85)), and the rest
+    of the team working on the amazing `ggplot2` package (and, frankly,
+    the entire `tidyverse` ecosystem)
+  - Garrick Aden-Buie ([gadenbuie](https://github.com/gadenbuie)) and Dr
+    Simon Jackson ([drsimonj](https://github.com/drsimonj)) for
+    inspiration
