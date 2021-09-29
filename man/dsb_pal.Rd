@@ -2,7 +2,7 @@
 % Please edit documentation in R/dsb_pal.R
 \name{dsb_pal}
 \alias{dsb_pal}
-\title{Use a DSB styled color palette for your ggplot2 plots}
+\title{Use a DSB styled continuous color palette for your ggplot2 plots}
 \usage{
 dsb_pal(palette = "main", reverse = FALSE, ...)
 }

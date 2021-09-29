@@ -1,59 +1,5 @@
+# ----- Create list with continuous color palettes
 dsb_palettes <- list(
-
-  `one` = dsb_colvec("DSB_Red"),
-
-  `two` = dsb_colvec("DSB_Red", "DSB_DarkBlue"),
-
-  `three` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange"),
-
-  `four` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen"),
-
-  `five` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple"),
-
-  `six` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal"),
-
-  `seven` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey"),
-
-  `eight` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue"),
-
-  `nine` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen"),
-
-  `ten` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise"),
-
-  `eleven` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green"),
-
-  `main` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green", "DSB_LightGrey"),
-
-  # `one` = dsb_colvec("DSB_Red"),
-  #
-  # `two` = dsb_colvec("DSB_Red", "DSB_DarkBlue"),
-  #
-  # `three` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue"),
-  #
-  # `four` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkGreen", "DSB_DarkBlue"),
-  #
-  # `five` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple"),
-  #
-  # `six` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal"),
-  #
-  # `seven` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey"),
-  #
-  # `eight` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue"),
-  #
-  # `nine` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen"),
-  #
-  # `ten` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise"),
-  #
-  # `eleven` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green"),
-  #
-  # `twelve` = dsb_colvec("DSB_Red", "DSB_Orange", "DSB_DarkBlue", "DSB_DarkGreen", "DSB_Purple", "DSB_Teal", "DSB_DarkGrey", "DSB_LightBlue", "DSB_LightGreen", "DSB_Turqoise", "DSB_Green", "DSB_LightGrey"),
-
-
-  #`main` = dsb_colvec("DSB_Red", "DSB_Green", "DSB_Orange", "DSB_Turqoise", "DSB_DarkGrey", "DSB_Purple", "DSB_Teal", "DSB_DarkBlue"),
-
-  #`four` = dsb_colvec("DSB_Red", "DSB_DarkBlue", "DSB_Orange", "DSB_LightGrey"),
-
-  #`full`  = dsb_colvec(),
 
   `reds` = dsb_colvec("DSB_Orange", "DSB_Red"),
 
@@ -65,11 +11,34 @@ dsb_palettes <- list(
 
 )
 
+# ----- Create list of lists with discrete color palettes
+dsb_palettes_d <- list()
+
+dsb_palettes_d$main <- list(
+
+  "DSB_Red" = "#B41730",
+  "DSB_DarkBlue" = "#00233C",
+  "DSB_Orange" = "#DF652C",
+  "DSB_DarkGreen" = "#144E36",
+  "DSB_Purple" = "#6E3C6E",
+  "DSB_Teal" = "#28767E",
+  "DSB_DarkGrey" = "#747474",
+  "DSB_LightBlue" = "#5382B6",
+  "DSB_LightGreen" = "#88C988",
+  "DSB_Turqoise" = "#41BDBF",
+  "DSB_Green" = "#1CA645",
+  "DSB_LightGrey" = "#A5A5A5"
+
+)
+
 
 # ----- Upload data to GitHub
 getwd()
 save(dsb_palettes,
      file = "data/dsb_palettes.rda")
+save(dsb_palettes_d,
+     file = "data/dsb_palettes_d.rda")
+
 # usethis::use_data(dsb_palettes,
 #                   overwrite = TRUE)
 

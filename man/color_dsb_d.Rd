@@ -2,9 +2,15 @@
 % Please edit documentation in R/color_dsb_d.R
 \name{color_dsb_d}
 \alias{color_dsb_d}
-\title{Use a DSB styled color palette for your ggplot2 plots}
+\title{Use a DSB styled discrete color palette for your ggplot2 plots}
 \usage{
-color_dsb_d(palette = "three", reverse = FALSE, ...)
+color_dsb_d(
+  palette = "main",
+  primary = "DSB_Red",
+  other = "DSB_DarkBlue",
+  reverse = FALSE,
+  ...
+)
 }
 \arguments{
 \item{...}{x}

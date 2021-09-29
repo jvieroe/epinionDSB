@@ -1,4 +1,4 @@
-#' Use a DSB styled color palette for your ggplot2 plots
+#' Use a DSB styled discrete color palette for your ggplot2 plots
 #'
 #' This function creates a DSB compliant color palette for discrete variables
 #' @param ... x
@@ -6,12 +6,17 @@
 #' @author Jeppe Vierø
 #' @export
 
-color_dsb_d <- function(palette = "three",
+color_dsb_d <- function(palette = "main",
+                        primary = "DSB_Red",
+                        other = "DSB_DarkBlue",
                         reverse = FALSE,
                         ...) {
 
-  pal <- dsb_pal(palette = palette, reverse = reverse)
+  ggplot2::discrete_scale(
+    "colour", "branded",
+    dsb_pal_d(palette, primary, other, reverse),
+    ...
 
-  discrete_scale("colour", paste0("dsb_", palette), palette = pal, ...) #
+  )
 
 }

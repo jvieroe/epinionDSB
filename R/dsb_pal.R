@@ -1,4 +1,4 @@
-#' Use a DSB styled color palette for your ggplot2 plots
+#' Use a DSB styled continuous color palette for your ggplot2 plots
 #'
 #' This function creates a DSB compliant color palette
 #' @param ... x
