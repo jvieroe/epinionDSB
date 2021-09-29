@@ -6,6 +6,7 @@
 #' @author Jeppe Vierø
 #' @export
 
+
 epi_colvec <- function(...) {
 
   cols <- c(...)
