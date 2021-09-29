@@ -10,7 +10,7 @@ epi_pal <- function(palette = "epiblue",
                     reverse = FALSE,
                     ...) {
 
-  pal <- dsb_palettes[[palette]]
+  pal <- epi_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
 
