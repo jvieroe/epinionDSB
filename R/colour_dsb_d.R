@@ -7,8 +7,8 @@
 #' @export
 
 colour_dsb_d <- function(palette = "main",
-                         primary = "DSB_Red",
-                         other = "DSB_DarkBlue",
+                         #primary = "DSB_Red",
+                         #other = "DSB_DarkBlue",
                          reverse = FALSE,
                          ...) {
 
