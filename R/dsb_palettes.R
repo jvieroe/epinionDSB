@@ -32,6 +32,26 @@ dsb_palettes_d$main <- list(
 )
 
 
+dsb_palettes_d$epinion <- list(
+
+  "Epi_DarkBlue" = "#0F283C",
+  "Epi_WarmSand" = "#E8E1D5",
+  "Epi_DarkPurple" = "#641E3C",
+  "Epi_ClearBlue" = "#233CA0",
+  "Epi_LightDeepBlue" = "#68838B",
+  "Epi_LightPurple" = "#BA7384",
+  "Epi_LightBlue" = "#A7C7D7",
+  "Epi_Green" = "#004337",
+  "Epi_LightGreen" = "#73A89A",
+  "Epi_Gold" = "#C18022",
+  "Epi_LightGold" = "#EBC882",
+  "Epi_Red" = "#E13C32"
+
+)
+
+
+
+
 # ----- Upload data to GitHub
 getwd()
 save(dsb_palettes,
