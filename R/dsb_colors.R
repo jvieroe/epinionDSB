@@ -90,6 +90,8 @@ epinion_colors <- tibble::tibble(
 
 epinion_cols <- tibble::deframe(epinion_colors)
 
+rm(epinion_colors)
+
 # ----- Upload data to GitHub
 getwd()
 save(dsb_cols,
