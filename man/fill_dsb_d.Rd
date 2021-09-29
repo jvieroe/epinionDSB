@@ -4,7 +4,13 @@
 \alias{fill_dsb_d}
 \title{Use a DSB styled color palette for your ggplot2 plots}
 \usage{
-fill_dsb_d(palette = "three", reverse = FALSE, ...)
+fill_dsb_d(
+  palette = "main",
+  primary = "DSB_Red",
+  other = "DSB_DarkBlue",
+  reverse = FALSE,
+  ...
+)
 }
 \arguments{
 \item{...}{x}

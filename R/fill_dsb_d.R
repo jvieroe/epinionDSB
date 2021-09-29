@@ -6,12 +6,27 @@
 #' @author Jeppe Vierø
 #' @export
 
-fill_dsb_d <- function(palette = "three",
+fill_dsb_d <- function(palette = "main",
+                       primary = "DSB_Red",
+                       other = "DSB_DarkBlue",
                        reverse = FALSE,
                        ...) {
 
-  pal <- dsb_pal(palette = palette, reverse = reverse)
+  ggplot2::discrete_scale(
+    "fill", "branded",
+    dsb_pal_d(palette, primary, other, reverse),
+    ...
 
-  discrete_scale("fill", paste0("dsb_", palette), palette = pal, ...)
+  )
 
 }
+
+# fill_dsb_d <- function(palette = "three",
+#                        reverse = FALSE,
+#                        ...) {
+#
+#   pal <- dsb_pal(palette = palette, reverse = reverse)
+#
+#   discrete_scale("fill", paste0("dsb_", palette), palette = pal, ...)
+#
+# }
