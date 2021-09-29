@@ -17,3 +17,4 @@ epi_colvec <- function(...) {
   epinion_cols[cols]
 
 }
+

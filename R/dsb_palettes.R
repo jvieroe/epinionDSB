@@ -11,17 +11,17 @@ dsb_palettes <- list(
 
 )
 
-# epi_palettes <- list(
-#
-#   `epiblue` = epi_colvec("Epi_WarmSand", "Epi_ClearBlue", "Epi_DarkBlue"),
-#
-#   `epipurple` = epi_colvec("Epi_WarmSand", "Epi_LightPurple", "Epi_DarkPurple"),
-#
-#   `epigreen` = epi_colvec("Epi_WarmSand", "Epi_LightGreen", "Epi_Green"),
-#
-#   `epigold` = epi_colvec("Epi_WarmSand", "Epi_LightGold", "Epi_Gold")
-#
-# )
+epi_palettes <- list(
+
+  `epiblue` = epi_colvec("Epi_WarmSand", "Epi_ClearBlue", "Epi_DarkBlue"),
+
+  `epipurple` = epi_colvec("Epi_WarmSand", "Epi_LightPurple", "Epi_DarkPurple"),
+
+  `epigreen` = epi_colvec("Epi_WarmSand", "Epi_LightGreen", "Epi_Green"),
+
+  `epigold` = epi_colvec("Epi_WarmSand", "Epi_LightGold", "Epi_Gold")
+
+)
 
 # ----- Create list of lists with discrete color palettes
 dsb_palettes_d <- list()
@@ -68,8 +68,8 @@ dsb_palettes_d$main <- list(
 getwd()
 save(dsb_palettes,
      file = "data/dsb_palettes.rda")
-# save(epi_palettes,
-#      file = "data/epi_palettes.rda")
+save(epi_palettes,
+     file = "data/epi_palettes.rda")
 save(dsb_palettes_d,
      file = "data/dsb_palettes_d.rda")
 
