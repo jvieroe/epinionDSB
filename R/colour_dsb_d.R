@@ -6,7 +6,7 @@
 #' @author Jeppe Vierø
 #' @export
 
-colour_dsb_d <- function(palette = "three",
+colour_dsb_d <- function(palette = "main",
                          reverse = FALSE,
                          ...) {
 
@@ -14,7 +14,8 @@ colour_dsb_d <- function(palette = "three",
 
   if (reverse) pal <- rev(pal)
 
-
   scale_color_manual(values = pal)
 
 }
+
+
