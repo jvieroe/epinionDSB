@@ -4,7 +4,7 @@
 \alias{dsb_pal}
 \title{Use a DSB styled continuous color palette for your ggplot2 plots}
 \usage{
-dsb_pal(palette = "main", reverse = FALSE, ...)
+dsb_pal(palette = "reds", reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{x}

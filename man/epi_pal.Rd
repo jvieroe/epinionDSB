@@ -4,7 +4,7 @@
 \alias{epi_pal}
 \title{Use an Epinion styled continuous color palette for your ggplot2 plots}
 \usage{
-epi_pal(palette = "epinion", reverse = FALSE, ...)
+epi_pal(palette = "epiblue", reverse = FALSE, ...)
 }
 \arguments{
 \item{...}{x}

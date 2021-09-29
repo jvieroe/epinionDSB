@@ -69,7 +69,7 @@ getwd()
 save(dsb_palettes,
      file = "data/dsb_palettes.rda")
 save(epi_palettes,
-     file = "data/dsb_palettes.rda")
+     file = "data/epi_palettes.rda")
 save(dsb_palettes_d,
      file = "data/dsb_palettes_d.rda")
 
