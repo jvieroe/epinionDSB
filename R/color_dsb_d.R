@@ -14,7 +14,7 @@ color_dsb_d <- function(palette = "main",
 
   ggplot2::discrete_scale(
     "colour", "branded",
-    dsb_pal_d(palette, primary, other, reverse),
+    dsb_pal_d(palette, primary, other, reverse, ...),
     ...
 
   )
