@@ -60,7 +60,6 @@ dsb_cols <- tibble::deframe(dsb_cols)
 
 epinion_colors <- tibble::tibble(
   name = c(
-    "Epi_White",
     "Epi_Red",
     "Epi_DarkBlue",
     "Epi_WarmSand",
@@ -74,7 +73,6 @@ epinion_colors <- tibble::tibble(
     "Epi_Gold",
     "Epi_LightGold"),
   hex_codes = c(
-    "#FFFFFF",
     "#E13C32",
     "#0F283C",
     "#E8E1D5",
