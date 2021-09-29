@@ -11,17 +11,17 @@ dsb_palettes <- list(
 
 )
 
-epi_palettes <- list(
-
-  `epiblue` = epi_colvec("Epi_WarmSand", "Epi_ClearBlue", "Epi_DarkBlue"),
-
-  `epipurple` = epi_colvec("Epi_WarmSand", "Epi_LightPurple", "Epi_DarkPurple"),
-
-  `epigreen` = epi_colvec("Epi_WarmSand", "Epi_LightGreen", "Epi_Green"),
-
-  `epigold` = epi_colvec("Epi_WarmSand", "Epi_LightGold", "Epi_Gold")
-
-)
+# epi_palettes <- list(
+#
+#   `epiblue` = epi_colvec("Epi_WarmSand", "Epi_ClearBlue", "Epi_DarkBlue"),
+#
+#   `epipurple` = epi_colvec("Epi_WarmSand", "Epi_LightPurple", "Epi_DarkPurple"),
+#
+#   `epigreen` = epi_colvec("Epi_WarmSand", "Epi_LightGreen", "Epi_Green"),
+#
+#   `epigold` = epi_colvec("Epi_WarmSand", "Epi_LightGold", "Epi_Gold")
+#
+# )
 
 # ----- Create list of lists with discrete color palettes
 dsb_palettes_d <- list()
@@ -44,22 +44,22 @@ dsb_palettes_d$main <- list(
 )
 
 
-dsb_palettes_d$epinion <- list(
-
-  "Epi_DarkBlue" = "#0F283C",
-  "Epi_WarmSand" = "#E8E1D5",
-  "Epi_DarkPurple" = "#641E3C",
-  "Epi_ClearBlue" = "#233CA0",
-  "Epi_LightDeepBlue" = "#68838B",
-  "Epi_LightPurple" = "#BA7384",
-  "Epi_LightBlue" = "#A7C7D7",
-  "Epi_Green" = "#004337",
-  "Epi_LightGreen" = "#73A89A",
-  "Epi_Gold" = "#C18022",
-  "Epi_LightGold" = "#EBC882",
-  "Epi_Red" = "#E13C32"
-
-)
+# dsb_palettes_d$epinion <- list(
+#
+#   "Epi_DarkBlue" = "#0F283C",
+#   "Epi_WarmSand" = "#E8E1D5",
+#   "Epi_DarkPurple" = "#641E3C",
+#   "Epi_ClearBlue" = "#233CA0",
+#   "Epi_LightDeepBlue" = "#68838B",
+#   "Epi_LightPurple" = "#BA7384",
+#   "Epi_LightBlue" = "#A7C7D7",
+#   "Epi_Green" = "#004337",
+#   "Epi_LightGreen" = "#73A89A",
+#   "Epi_Gold" = "#C18022",
+#   "Epi_LightGold" = "#EBC882",
+#   "Epi_Red" = "#E13C32"
+#
+# )
 
 
 
@@ -68,8 +68,8 @@ dsb_palettes_d$epinion <- list(
 getwd()
 save(dsb_palettes,
      file = "data/dsb_palettes.rda")
-save(epi_palettes,
-     file = "data/epi_palettes.rda")
+# save(epi_palettes,
+#      file = "data/epi_palettes.rda")
 save(dsb_palettes_d,
      file = "data/dsb_palettes_d.rda")
 
