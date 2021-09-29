@@ -6,7 +6,7 @@
 #' @author Jeppe Vierø
 #' @export
 
-epi_pal <- function(palette = "epinion",
+epi_pal <- function(palette = "blues",
                     reverse = FALSE,
                     ...) {
 
