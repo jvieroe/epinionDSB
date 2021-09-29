@@ -99,7 +99,7 @@ dsb_colvec("DSB_Red", "DSB_DarkBlue")
 We can use these in our ```ggplot2``` syntax:
 
 ```{r warning=F, message=F}
-# ... a selection of colors
+# Manually pasting HEX codes
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
@@ -107,6 +107,20 @@ ggplot(mtcars, aes(x = wt,
   facet_wrap(~ vs) +
   dsb_style() +
   scale_colour_manual(values = c("#B41730", "#00233C"))
+```
+
+Or, more elegantly, by using the ```base::getElement()``` function:
+
+```{r warning=F, message=F}
+#  Using```getElement()```
+ggplot(mtcars, aes(x = wt,
+                   y = mpg,
+                   color = factor(am))) +
+  geom_point(size = 5) +
+  facet_wrap(~ vs) +
+  dsb_style() +
+  scale_colour_manual(values = c(getElement(dsb_colvec(), "DSB_Red"), 
+                                 getElement(dsb_colvec(), "DSB_DarkBlue")))
 ```
 
 Great! This is **much** more in line with DSB's visual identity. This is a tedious process, however, and any changes to the CVI would involve a lot of manual changes in our accumulated ```ggplot2``` syntax.
