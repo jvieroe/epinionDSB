@@ -51,7 +51,7 @@ whether a legend is included and defaulting to `TRUE` (with
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
-  geom_point(size = 5) +
+  geom_point(size = 4) +
   facet_wrap(~ vs) +
   dsb_style()
 ```
@@ -65,7 +65,7 @@ be overwritten by adding `theme()` elements after `dsb_style()`:
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
-  geom_point(size = 5) +
+  geom_point(size = 4) +
   facet_wrap(~ vs) +
   dsb_style() +
   theme(legend.position = "bottom")
@@ -112,7 +112,7 @@ function:
 ``` r
 ggplot(mtcars, aes(x = wt,
                    y = mpg)) +
-  geom_point(size = 5,
+  geom_point(size = 4,
              color = getElement(dsb_colvec(), "DSB_Red")) +
   facet_wrap(~ vs) +
   dsb_style()
@@ -127,7 +127,7 @@ the `getElement()` function:
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
-  geom_point(size = 5) +
+  geom_point(size = 4) +
   facet_wrap(~ vs) +
   dsb_style() +
   scale_colour_manual(values = c(getElement(dsb_colvec(), "DSB_Red"), 
@@ -170,7 +170,7 @@ p1 <-
   ggplot(mtcars, aes(x = wt,
                      y = mpg,
                      color = factor(am))) +
-  geom_point(size = 5) +
+  geom_point(size = 4) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_d()
@@ -180,7 +180,7 @@ p2 <-
   ggplot(mtcars, aes(x = wt,
                      y = mpg,
                      color = disp)) +
-  geom_point(size = 5) +
+  geom_point(size = 4) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_c()
@@ -213,7 +213,7 @@ p1 <-
   ggplot(mtcars, aes(x = wt,
                          y = mpg,
                          color = disp)) +
-  geom_point(size = 5) +
+  geom_point(size = 4) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_c(palette = "greens")
@@ -222,7 +222,7 @@ p2 <-
   ggplot(mtcars, aes(x = wt,
                          y = mpg,
                          color = disp)) +
-  geom_point(size = 5) +
+  geom_point(size = 4) +
   facet_wrap(~ vs) +
   dsb_style() +
   color_dsb_c(palette = "greens",
@@ -255,3 +255,5 @@ for details on additional arguments.
   - Garrick Aden-Buie ([gadenbuie](https://github.com/gadenbuie)) and Dr
     Simon Jackson ([drsimonj](https://github.com/drsimonj)) for
     inspiration
+  - Steffen Bank ([steffenbank](https://github.com/steffenbank)) for
+    convincing me to finally try to write my own `R` package
