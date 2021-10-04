@@ -1,6 +1,6 @@
 #' Use a DSB styled discrete color palette for your ggplot2 plots
 #'
-#' This function creates a very DSB compliant color palette for discrete variables
+#' This function creates a super DSB compliant color palette for discrete variables
 #' @param ... x
 #' @return ... z
 #' @author Jeppe Vierø

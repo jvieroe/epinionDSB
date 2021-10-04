@@ -19,7 +19,7 @@ color_dsb_d(
 ... z
 }
 \description{
-This function creates a very DSB compliant color palette for discrete variables
+This function creates a super DSB compliant color palette for discrete variables
 }
 \author{
 Jeppe Vierø
