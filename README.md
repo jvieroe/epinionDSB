@@ -7,7 +7,7 @@
 
 <!-- badges: end -->
 
-The goal of `epinionDSB` is to provide easy-to-use templates for
+The hello goal of `epinionDSB` is to provide easy-to-use templates for
 visualizations using the `ggplot2` package
 
 ## Installation
