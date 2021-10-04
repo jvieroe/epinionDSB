@@ -106,22 +106,8 @@ dsb_colvec("DSB_Red", "DSB_DarkBlue")
 #>    "#B41730"    "#00233C"
 ```
 
-Direct access to the HEX codes is possible with the `base::getElement()`
-function:
-
-``` r
-ggplot(mtcars, aes(x = wt,
-                   y = mpg)) +
-  geom_point(size = 4,
-             color = getElement(dsb_colvec(), "DSB_Red")) +
-  facet_wrap(~ vs) +
-  dsb_style()
-```
-
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="75%" style="display: block; margin: auto;" />
-
-We can use these in our `ggplot2` syntax or, more elegantly, by using
-the `getElement()` function:
+We can use these in our `ggplot2` syntax or by pasting the HEX codes or,
+more elegantly, by using the `getElement()` function:
 
 ``` r
 ggplot(mtcars, aes(x = wt,
@@ -135,7 +121,7 @@ ggplot(mtcars, aes(x = wt,
   theme(legend.position = "none")
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="75%" style="display: block; margin: auto;" />
 
 Great\! This is **much** more in line with DSB’s visual identity. This
 is a tedious process, however, and any changes to the CVI would involve
@@ -191,7 +177,7 @@ grid.arrange(
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="75%" style="display: block; margin: auto;" />
 
 `color_dsb_*()` and `fill_dsb_*()` primarily take two arguments as
 inputs:
@@ -234,7 +220,7 @@ grid.arrange(
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="75%" style="display: block; margin: auto;" />
 
 Notice however that `color_dsb_c()` and `color_dsb_d()` inherently calls
 `ggplot2::scale_colour_gradientn()` and `ggplot2::discrete_scale()`,

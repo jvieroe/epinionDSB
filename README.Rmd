@@ -96,21 +96,9 @@ dsb_colvec()
 dsb_colvec("DSB_Red", "DSB_DarkBlue")
 ```
 
-Direct access to the HEX codes is possible with the ```base::getElement()``` function:
 
-```{r warning=F, message=F}
-ggplot(mtcars, aes(x = wt,
-                   y = mpg)) +
-  geom_point(size = 4,
-             color = getElement(dsb_colvec(), "DSB_Red")) +
-  facet_wrap(~ vs) +
-  dsb_style()
+We can use these in our ```ggplot2``` syntax or by pasting the HEX codes or, more elegantly, by using the ```getElement()``` function:
 
-
-```
-
-
-We can use these in our ```ggplot2``` syntax or, more elegantly, by using the ```getElement()``` function:
 
 ```{r warning=F, message=F}
 ggplot(mtcars, aes(x = wt,
