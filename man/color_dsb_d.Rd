@@ -49,6 +49,10 @@ ggplot(mtcars, aes(x = wt, y = mpg, color = factor(am))) +
 geom_point() +
 color_dsb_d()
 library(tidyverse)
+ggplot(mtcars, aes(x = wt, y = mpg, factor(am))) +
+geom_point() +
+colour_dsb_d()
+library(tidyverse)
 ggplot(mtcars, aes(x = wt, y = mpg, fill = factor(am))) +
 geom_point(shape = 21, color = "NA") +
 fill_dsb_d()

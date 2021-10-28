@@ -29,6 +29,11 @@ color_dsb_d <- function(palette = "main",
 }
 
 #' @rdname color_dsb_d
+#' @examples
+#' library(tidyverse)
+#' ggplot(mtcars, aes(x = wt, y = mpg, factor(am))) +
+#' geom_point() +
+#' colour_dsb_d()
 #' @export
 
 colour_dsb_d <- color_dsb_d
