@@ -2,12 +2,9 @@
 % Please edit documentation in R/color_dsb_c.R
 \name{color_dsb_c}
 \alias{color_dsb_c}
-\alias{colour_dsb_c}
 \title{Apply a continuous color scale to your \code{ggplot2} graphics}
 \usage{
 color_dsb_c(palette = "reds", reverse = FALSE, ...)
-
-colour_dsb_c(palette = "reds", reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{a continuous color palette. Default is "reds"}

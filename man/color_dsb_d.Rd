@@ -2,18 +2,9 @@
 % Please edit documentation in R/color_dsb_d.R, R/fill_dsb_d.R
 \name{color_dsb_d}
 \alias{color_dsb_d}
-\alias{colour_dsb_d}
 \title{Apply a discrete color scale to your \code{ggplot2} graphics}
 \usage{
 color_dsb_d(
-  palette = "main",
-  primary = NULL,
-  secondary = NULL,
-  reverse = FALSE,
-  ...
-)
-
-colour_dsb_d(
   palette = "main",
   primary = NULL,
   secondary = NULL,
