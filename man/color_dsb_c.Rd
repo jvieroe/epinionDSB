@@ -2,18 +2,26 @@
 % Please edit documentation in R/color_dsb_c.R
 \name{color_dsb_c}
 \alias{color_dsb_c}
-\title{Use a DSB styled color palette for your ggplot2 plots}
+\alias{colour_dsb_c}
+\title{Apply a continuous color scale to your \code{ggplot2} graphics}
 \usage{
 color_dsb_c(palette = "reds", reverse = FALSE, ...)
+
+colour_dsb_c(palette = "reds", reverse = FALSE, ...)
 }
 \arguments{
-\item{...}{x}
-}
-\value{
-... z
+\item{palette}{a continuous color palette. Default is "reds"}
+
+\item{reverse}{A logical value indicating whether to reverse the color scale. Defaults to \code{FALSE}}
 }
 \description{
-This function creates a DSB compliant color palette for continuous variables
+This function applies a continuous color scale using colors from the DSB color palette
+}
+\examples{
+library(tidyverse)
+ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
+geom_point() +
+color_dsb_c()
 }
 \author{
 Jeppe Vierø

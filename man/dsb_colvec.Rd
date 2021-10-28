@@ -2,7 +2,7 @@
 % Please edit documentation in R/dsb_colvec.R
 \name{dsb_colvec}
 \alias{dsb_colvec}
-\title{Use a DSB styled color palette for your ggplot2 graphics}
+\title{Extract colors from the Epinion CVI color palette by their name}
 \usage{
 dsb_colvec(...)
 }
@@ -13,7 +13,7 @@ dsb_colvec(...)
 the corresponding HEX code
 }
 \description{
-This function extract DSB compliant colors (in HEX codes) by their name
+This function extracts colors (in HEX codes) from the DSB color palette by their name
 }
 \author{
 Jeppe Vierø

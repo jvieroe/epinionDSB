@@ -1,6 +1,6 @@
-#' Use a DSB styled color palette for your ggplot2 graphics
+#' Extract colors from the Epinion CVI color palette by their name
 #'
-#' This function extract DSB compliant colors (in HEX codes) by their name
+#' This function extracts colors (in HEX codes) from the DSB color palette by their name
 #' @param ... takes as input the name of the color(s) needed
 #' @return the corresponding HEX code
 #' @author Jeppe Vierø
