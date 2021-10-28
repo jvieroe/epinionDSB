@@ -55,7 +55,7 @@ ggplot(mtcars, aes(x = wt,
                    color = factor(am))) +
   geom_point(size = 4) +
   facet_wrap(~ vs) +
-  dsb_style()
+  dsb_theme_classic()
 
 ```
 
