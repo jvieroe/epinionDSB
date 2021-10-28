@@ -8,7 +8,7 @@
 #' @examples
 #' library(tidyverse)
 #' ggplot(mtcars, aes(x = wt, y = mpg, color = factor(am))) +
-#' geom_point() +
+#' geom_point(shape = 21, color = "NA") +
 #' color_dsb_d()
 #' @author Jeppe Vierø
 #' @export

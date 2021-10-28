@@ -13,11 +13,11 @@
 #' @author Jeppe Vierø
 #' @export
 
-color_dsb_d <- function(palette = "main",
-                        primary = NULL,
-                        secondary = NULL,
-                        reverse = FALSE,
-                        ...) {
+fill_dsb_d <- function(palette = "main",
+                       primary = NULL,
+                       secondary = NULL,
+                       reverse = FALSE,
+                       ...) {
 
   ggplot2::discrete_scale(
     "fill", "branded",
