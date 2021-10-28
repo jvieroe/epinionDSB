@@ -53,7 +53,7 @@ ggplot(mtcars, aes(x = wt,
                    color = factor(am))) +
   geom_point(size = 4) +
   facet_wrap(~ vs) +
-  dsb_style()
+  dsb_theme_classic()
 ```
 
 <img src="man/figures/README-cars-1.png" width="75%" style="display: block; margin: auto;" />
@@ -67,8 +67,8 @@ ggplot(mtcars, aes(x = wt,
                    color = factor(am))) +
   geom_point(size = 4) +
   facet_wrap(~ vs) +
-  dsb_style() +
-  theme(legend.position = "bottom")
+  dsb_theme_classic() +
+  theme(legend.position = "right")
 ```
 
 <img src="man/figures/README-cars2-1.png" width="75%" style="display: block; margin: auto;" />
@@ -94,15 +94,15 @@ DSBDM and for readily used color palettes. Specifically, the
 ``` r
 # ... all DSB colors
 dsb_colvec()
-#>        DSB_Red   DSB_DarkBlue  DSB_LightBlue     DSB_Orange  DSB_LightGrey 
+#>        DSB Red   DSB DarkBlue  DSB LightBlue     DSB Orange  DSB LightGrey 
 #>      "#B41730"      "#00233C"      "#5382B6"      "#DF652C"      "#A5A5A5" 
-#>     DSB_Purple       DSB_Teal   DSB_Turqoise   DSB_DarkGrey DSB_LightGreen 
+#>     DSB Purple       DSB Teal   DSB Turqoise   DSB DarkGrey DSB LightGreen 
 #>      "#6E3C6E"      "#28767E"      "#41BDBF"      "#747474"      "#88C988" 
-#>      DSB_Green  DSB_DarkGreen 
+#>      DSB Green  DSB DarkGreen 
 #>      "#1CA645"      "#144E36"
 # a selection of colors
-dsb_colvec("DSB_Red", "DSB_DarkBlue")
-#>      DSB_Red DSB_DarkBlue 
+dsb_colvec("DSB Red", "DSB DarkBlue")
+#>      DSB Red DSB DarkBlue 
 #>    "#B41730"    "#00233C"
 ```
 
@@ -115,9 +115,9 @@ ggplot(mtcars, aes(x = wt,
                    color = factor(am))) +
   geom_point(size = 4) +
   facet_wrap(~ vs) +
-  dsb_style() +
-  scale_colour_manual(values = c(getElement(dsb_colvec(), "DSB_Red"), 
-                                 getElement(dsb_colvec(), "DSB_DarkBlue"))) +
+  dsb_theme_classic() +
+  scale_colour_manual(values = c(getElement(dsb_colvec(), "DSB Red"), 
+                                 getElement(dsb_colvec(), "DSB DarkBlue"))) +
   theme(legend.position = "none")
 ```
 
@@ -158,7 +158,8 @@ p1 <-
                      color = factor(am))) +
   geom_point(size = 4) +
   facet_wrap(~ vs) +
-  dsb_style() +
+  dsb_theme_classic() +
+  theme(legend.position = "right") +
   color_dsb_d()
 
 # continuous variable in aes()
@@ -168,7 +169,8 @@ p2 <-
                      color = disp)) +
   geom_point(size = 4) +
   facet_wrap(~ vs) +
-  dsb_style() +
+  dsb_theme_classic() +
+  theme(legend.position = "right") +
   color_dsb_c()
 
 grid.arrange(
@@ -201,7 +203,8 @@ p1 <-
                          color = disp)) +
   geom_point(size = 4) +
   facet_wrap(~ vs) +
-  dsb_style() +
+  dsb_theme_classic() +
+  theme(legend.position = "right") +
   color_dsb_c(palette = "greens")
 
 p2 <- 
@@ -210,7 +213,8 @@ p2 <-
                          color = disp)) +
   geom_point(size = 4) +
   facet_wrap(~ vs) +
-  dsb_style() +
+  dsb_theme_classic() +
+  theme(legend.position = "right") +
   color_dsb_c(palette = "greens",
               reverse = TRUE)
 
@@ -222,8 +226,8 @@ grid.arrange(
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="75%" style="display: block; margin: auto;" />
 
-Notice however that `color_dsb_c()` and `color_dsb_d()` inherently calls
-`ggplot2::scale_colour_gradientn()` and `ggplot2::discrete_scale()`,
+Notice however that `*_dsb_c()` and `*_dsb_d()` inherently calls
+`ggplot2::scale_*_gradientn()` and `ggplot2::discrete_scale()`,
 respectively. For that reason, additional arguments, such as `guide`,
 also apply. See
 [`ggplot2::scale_colour_gradientn()`](https://tidyverse.github.io/ggplot2-docs/reference/scale_gradient.html "Gradient colour scales")
