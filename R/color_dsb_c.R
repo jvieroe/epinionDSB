@@ -29,5 +29,4 @@ color_dsb_c <- function(palette = "reds",
 
 #' @rdname color_dsb_c
 #' @export
-
 colour_dsb_c <- color_dsb_c
