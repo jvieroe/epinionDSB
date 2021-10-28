@@ -28,7 +28,7 @@ color_dsb_d <- function(palette = "main",
 
 }
 
-#' @rdname colour_dsb_d
+#' @rdname color_dsb_d
 #' @export
 
 colour_dsb_d <- color_dsb_d
