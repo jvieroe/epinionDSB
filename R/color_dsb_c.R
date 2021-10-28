@@ -28,11 +28,6 @@ color_dsb_c <- function(palette = "reds",
 
 
 #' @rdname color_dsb_c
-#' @examples
-#' library(tidyverse)
-#' ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
-#' geom_point() +
-#' colour_dsb_c()
 #' @export
 
 colour_dsb_c <- color_dsb_c

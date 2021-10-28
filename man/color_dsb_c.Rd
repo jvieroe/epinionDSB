@@ -22,10 +22,6 @@ library(tidyverse)
 ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
 geom_point() +
 color_dsb_c()
-library(tidyverse)
-ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
-geom_point() +
-colour_dsb_c()
 }
 \author{
 Jeppe Vierø
