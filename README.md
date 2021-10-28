@@ -8,7 +8,8 @@
 <!-- badges: end -->
 
 The goal of `epinionDSB` is to provide easy-to-use templates for
-visualizations using the `ggplot2` package
+visualizations using the `ggplot2` package and in line with the
+Corporate Visual Identity (CVI) of DSB.
 
 ## Installation
 
