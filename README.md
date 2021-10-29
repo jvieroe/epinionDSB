@@ -46,7 +46,7 @@ The `dsb_style()` function does not impact the `aes()` of your
 `geom_*()`, only the `ggplot2::theme()`. The only argument taken by
 `dsb_style` (at the time of writing) is the `legend` option specifying
 whether a legend is included and defaulting to `TRUE` (with
-`legend.position` defaulting to `"right"`)
+`legend.position` defaulting to `"right"`).
 
 ``` r
 ggplot(mtcars, aes(x = wt,
