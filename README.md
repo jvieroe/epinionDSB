@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![CodeFactor](https://www.codefactor.io/repository/github/jvieroe/epiniondsb/badge)](https://www.codefactor.io/repository/github/jvieroe/epiniondsb)
 <!-- badges: end -->
 
 The goal of `epinionDSB` is to provide easy-to-use templates for
