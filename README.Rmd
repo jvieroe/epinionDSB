@@ -21,6 +21,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CodeFactor](https://www.codefactor.io/repository/github/jvieroe/epiniondsb/badge)](https://www.codefactor.io/repository/github/jvieroe/epiniondsb)
 [![Github All Releases](https://img.shields.io/github/downloads/jvieroe/epinionDSB/total.svg)]()
+[![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 The goal of ```epinionDSB``` is to provide easy-to-use templates for visualizations using the ```ggplot2``` package and in line with the Corporate Visual Identity (CVI) of DSB.
