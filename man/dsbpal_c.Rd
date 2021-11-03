@@ -11,6 +11,6 @@ A \code{list} with 4 elements
 dsbpal_c
 }
 \description{
-A spatial dataset containing
+Continuous DSB color palettes
 }
 \keyword{datasets}

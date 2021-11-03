@@ -11,6 +11,6 @@ A \code{list} with 1 element
 dsbpal_d
 }
 \description{
-A dataset containing the location of 10,000 US cities
+Discrete DSB color palettes
 }
 \keyword{datasets}
