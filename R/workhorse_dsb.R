@@ -41,8 +41,8 @@ check_theme_map <- function(legend,
     stop("Invalid 'legend' argument provided. Must be logical")
   }
 
-  if(!paste0("Epinion ", textcolor) %in% c(names(repinion::epi_cols), "Epinion black")) {
-    stop("Invalid 'textcolor' argument provided. Must be either 'black' or one of names(repinion::epi_cols) (without Epinion prefix)")
+  if(!paste0("DSB ", textcolor) %in% c(names(epinionDSB::dsb_cols), "DSB black")) {
+    stop("Invalid 'textcolor' argument provided. Must be either 'black' or one of names(epinionDSB::dsb_cols) (without DSB prefix)")
   }
 
 }
