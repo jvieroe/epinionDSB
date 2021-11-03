@@ -23,7 +23,7 @@ This function applies a theme consistent with the DSB Corporate Visual Identity 
 library(tidyverse)
 ggplot(mtcars, aes(x = wt, y = mpg)) +
 geom_point() +
-dsbtheme_classic()
+dsb_theme_classic()
 }
 \author{
 Jeppe Vierø

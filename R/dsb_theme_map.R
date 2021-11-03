@@ -8,7 +8,7 @@
 #' library(tidyverse)
 #' ggplot(mtcars, aes(x = wt, y = mpg)) +
 #' geom_point() +
-#' epitheme_map()
+#' dsb_theme_map()
 #' @author Jeppe Vierø
 #' @import ggplot2 scales
 #' @export

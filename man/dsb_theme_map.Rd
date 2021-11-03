@@ -21,7 +21,7 @@ This function applies a minimalist theme suitable for maps and consistent with t
 library(tidyverse)
 ggplot(mtcars, aes(x = wt, y = mpg)) +
 geom_point() +
-epitheme_map()
+dsb_theme_map()
 }
 \author{
 Jeppe Vierø
