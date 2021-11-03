@@ -26,7 +26,7 @@ dsb_theme_map <- function(legend = TRUE,
 
   } else if (textcolor != "black") {
 
-    theme_textcolor <- getElement(epinionDSB::getcols_epi(), paste0("Epinion ",
+    theme_textcolor <- getElement(epinionDSB::dsb_colvec(), paste0("DSB ",
                                                                     textcolor))
 
   }
@@ -36,8 +36,8 @@ dsb_theme_map <- function(legend = TRUE,
     ggplot2::theme(strip.text = element_text(colour = theme_textcolor,
                                              face = "plain",
                                              size = 12),
-                   strip.background = element_rect(color = getElement(epinionDSB::getcols_epi(), "Epinion WarmSand"),
-                                                   fill = scales::alpha(getElement(epinionDSB::getcols_epi(), "Epinion WarmSand"), 0.4)),
+                   strip.background = element_rect(color = getElement(epinionDSB::dsb_colvec(), "DSB LightGrey"),
+                                                   fill = scales::alpha(getElement(epinionDSB::dsb_colvec(), "DSB LightGrey"), 0.4)),
                    plot.title = element_text(colour = theme_textcolor,
                                              face = "bold",
                                              size = 18),
