@@ -28,8 +28,8 @@ dsb_theme_classic <- function(legend = TRUE,
 
   } else if (textcolor != "black") {
 
-    theme_textcolor <- getElement(dsb_colvec(), paste0("DSB ",
-                                                       textcolor))
+    theme_textcolor <- getElement(epinionDSB::dsb_colvec(), paste0("DSB ",
+                                                                   textcolor))
 
   }
 
@@ -56,8 +56,8 @@ dsb_theme_classic <- function(legend = TRUE,
                    strip.text = element_text(colour = theme_textcolor,
                                              face = "plain",
                                              size = 12),
-                   strip.background = element_rect(color = getElement(dsb_colvec(), "DSB LightGrey"),
-                                                   fill = scales::alpha(getElement(dsb_colvec(), "DSB LightGrey"), 0.4)),
+                   strip.background = element_rect(color = getElement(epinionDSB::dsb_colvec(), "DSB LightGrey"),
+                                                   fill = scales::alpha(getElement(epinionDSB::dsb_colvec(), "DSB LightGrey"), 0.4)),
                    plot.title = element_text(colour = theme_textcolor,
                                              face = "bold",
                                              size = 18),
