@@ -95,4 +95,4 @@ dsbpal_d$main <- list(
 usethis::use_data(dsbpal_d,
                   overwrite = TRUE)
 
-document()
+
