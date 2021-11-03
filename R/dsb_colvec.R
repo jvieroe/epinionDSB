@@ -12,8 +12,8 @@ dsb_colvec <- function(...) {
 
   if (is.null(cols))
 
-    return (dsb_cols)
+    return (epinionDSB::dsb_cols)
 
-  dsb_cols[cols]
+  epinionDSB::dsb_cols[cols]
 
 }

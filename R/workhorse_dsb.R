@@ -4,7 +4,7 @@ dsb_pal_c <- function(palette = "reds",
                       reverse = FALSE,
                       ...) {
 
-  pal <- dsbpal_c[[palette]]
+  pal <- epinionDSB::dsbpal_c[[palette]]
 
   if (reverse) pal <- rev(pal)
 
@@ -76,7 +76,7 @@ dsb_pal_d <- function(palette = "main",
               secondary = secondary,
               reverse = reverse)
 
-  pal <- dsbpal_d[[palette]]
+  pal <- epinionDSB::dsbpal_d[[palette]]
 
   #stopifnot(primary %in% names(pal))
 

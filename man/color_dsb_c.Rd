@@ -13,6 +13,8 @@ colour_dsb_c(palette = "reds", reverse = FALSE, ...)
 \item{palette}{a continuous color palette. Default is "reds"}
 
 \item{reverse}{A logical value indicating whether to reverse the color scale. Defaults to \code{FALSE}}
+
+\item{...}{...}
 }
 \description{
 This function applies a continuous color scale using colors from the DSB color palette

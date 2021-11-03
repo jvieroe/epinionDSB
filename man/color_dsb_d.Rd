@@ -29,6 +29,8 @@ colour_dsb_d(
 \item{secondary}{a name of a valid DSB color (see \link[epinionDSB]{dsb_colvec}) to be applied to the primary category. Invalid with more than three levels}
 
 \item{reverse}{a logical value indicating whether to reverse the color scale. Defaults to \code{FALSE}}
+
+\item{...}{...}
 }
 \description{
 This function applies a discrete color scale using colors from the DSB color palette

@@ -10,6 +10,7 @@
 #' geom_point() +
 #' epitheme_map()
 #' @author Jeppe Vierø
+#' @import ggplot2 scales
 #' @export
 
 dsb_theme_map <- function(legend = TRUE,

@@ -11,6 +11,7 @@
 #' geom_point() +
 #' dsbtheme_classic()
 #' @author Jeppe Vierø
+#' @import ggplot2 scales
 #' @export
 
 dsb_theme_classic <- function(legend = TRUE,

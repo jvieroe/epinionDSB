@@ -3,12 +3,14 @@
 #' This function applies a continuous color scale using colors from the DSB color palette
 #' @param palette a continuous color palette. Default is "reds"
 #' @param reverse A logical value indicating whether to reverse the color scale. Defaults to `FALSE`
+#' @param ... ...
 #' @examples
 #' library(tidyverse)
 #' ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
 #' geom_point() +
 #' color_dsb_c()
 #' @author Jeppe Vierø
+#' @import ggplot2
 #' @export
 
 color_dsb_c <- function(palette = "reds",
@@ -20,7 +22,7 @@ color_dsb_c <- function(palette = "reds",
 
   pal <- dsb_pal_c(palette = palette, reverse = reverse)
 
-  scale_color_gradientn(colours = pal(256), ...)
+  ggplot2::scale_color_gradientn(colours = pal(256), ...)
 
 
 }
