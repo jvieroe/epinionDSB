@@ -106,6 +106,7 @@ dsb_colvec()
 #>      "#6E3C6E"      "#28767E"      "#41BDBF"      "#747474"      "#88C988" 
 #>      DSB Green  DSB DarkGreen 
 #>      "#1CA645"      "#144E36"
+
 # a selection of colors
 dsb_colvec("DSB Red", "DSB DarkBlue")
 #>      DSB Red DSB DarkBlue 
