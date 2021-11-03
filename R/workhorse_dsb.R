@@ -1,4 +1,5 @@
 
+#' @import grDevices
 #' @noRd
 dsb_pal_c <- function(palette = "reds",
                       reverse = FALSE,
@@ -8,7 +9,7 @@ dsb_pal_c <- function(palette = "reds",
 
   if (reverse) pal <- rev(pal)
 
-  colorRampPalette(pal, ...)
+  grDevices::colorRampPalette(pal, ...)
 
 }
 
