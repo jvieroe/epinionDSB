@@ -48,6 +48,30 @@ check_theme_map <- function(legend,
 }
 
 
+check_theme_dust <- function(legend,
+                             gridlines,
+                             textcolor,
+                             background) {
+
+  if(!legend %in% c(TRUE, FALSE)) {
+    stop("Invalid 'legend' argument provided. Must be logical")
+  }
+
+  if(!gridlines %in% c("both", "none", "x", "y")) {
+    stop("Invalid 'gridlines' argument provided. Must be either 'both', 'none', 'x', or 'y'")
+  }
+
+  if(!paste0("DSB ", textcolor) %in% c(names(epinionDSB::dsb_cols), "DSB black")) {
+    stop("Invalid 'textcolor' argument provided. Must be either 'black' or one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+  }
+
+  if(!background %in% c("no", "yes")) {
+    stop("Invalid 'background' argument provided. Must be 'no' or 'yes'")
+  }
+
+}
+
+
 #' @noRd
 check_col_d <- function(primary,
                         secondary,

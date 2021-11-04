@@ -1,4 +1,4 @@
-#' Apply an Epinion styled theme to your `ggplot2` graphics
+#' Apply a DSB styled theme to your `ggplot2` graphics
 #'
 #' This function applies a minimalist theme suitable for maps and consistent with the DSB Corporate Visual Identity (CVI) to your `ggplot2` graphics. Add it to your `ggplot2` syntax for conistent visual outputs.
 #' @param legend a logical value indicating whether a legend is included. Defaults to `TRUE` (with `legend.position` defaulting to `"bottom"`)

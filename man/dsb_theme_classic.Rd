@@ -2,7 +2,7 @@
 % Please edit documentation in R/dsb_theme_classic.R
 \name{dsb_theme_classic}
 \alias{dsb_theme_classic}
-\title{Apply an Epinion styled theme to your \code{ggplot2} graphics}
+\title{Apply a DSB styled theme to your \code{ggplot2} graphics}
 \usage{
 dsb_theme_classic(legend = TRUE, gridlines = "none", textcolor = "DarkBlue")
 }
