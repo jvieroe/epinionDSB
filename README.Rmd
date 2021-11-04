@@ -30,7 +30,31 @@ Master branch status: [![R-CMD-check](https://github.com/jvieroe/epinionDSB/work
 
 # Introduction
 
-The goal of ```epinionDSB``` is to provide easy-to-use templates for visualizations using the ```ggplot2``` package and in line with the Corporate Visual Identity (CVI) of DSB.
+The goal of ```epinionDSB``` is to provide easy-to-use templates for data visualizations using the ```ggplot2``` package and in line with the Corporate Visual Identity (CVI) of DSB.
+
+For this purpose, `epinionDSB` functionality includes:
+
+1. a set of tailor-made `ggplot2` themes
+2. custom-made color palettes for both discrete and continuous mapping variables
+
+
+## Quick example
+```{r, warning=F, message=F}
+library(tidyverse)
+library(epinionDSB)
+
+ggplot(mtcars, aes(x = wt,
+                   y = mpg,
+                   color = factor(am))) +
+  geom_point(size = 4) +
+  facet_wrap(~ vs) +
+  # dsb_theme_dust(background = "yes") 
+  # theme(strip.background = element_rect(color = "transparent"))
+  dsb_theme_classic()
+
+
+```
+
 
 
 ## Installation
@@ -49,27 +73,10 @@ The ```epinionDSB::dsb_style()``` function adds a tailormade theme to your ```gg
 * serves as a time-saver when producing many visualizations, as compared to specifying ```ggplot2::theme()``` in each plot
 * allows you to efficiently align visual styles and apply these across the board by altering the content of the ```dsb_style()``` function itself
 
-### Example
-```{r example, warning=F, message=F}
-library(tidyverse)
-library(epinionDSB)
-```
 
 The ```dsb_theme_classic()``` function does not impact the ```aes()``` of your ```geom_*()```, only the ```ggplot2::theme()```. The only argument taken by ```dsb_style``` (at the time of writing) is the ```legend``` option specifying whether a legend is included and defaulting to ```TRUE``` (with ```legend.position``` defaulting to ```"right"```).
 
 
-```{r cars}
-ggplot(mtcars, aes(x = wt,
-                   y = mpg,
-                   color = factor(am))) +
-  geom_point(size = 4) +
-  facet_wrap(~ vs) +
-  dsb_theme_dust(background = "yes") 
-  theme(strip.background = element_rect(color = "transparent"))
-  dsb_theme_classic()
-  
-
-```
 
 
 
