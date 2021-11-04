@@ -28,6 +28,8 @@ knitr::opts_chunk$set(
 Master branch status: [![R-CMD-check](https://github.com/jvieroe/epinionDSB/workflows/R-CMD-check/badge.svg)](https://github.com/jvieroe/epinionDSB/actions)
 <!-- badges: end -->
 
+# Introduction
+
 The goal of ```epinionDSB``` is to provide easy-to-use templates for visualizations using the ```ggplot2``` package and in line with the Corporate Visual Identity (CVI) of DSB.
 
 
