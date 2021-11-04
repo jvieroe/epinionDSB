@@ -9,9 +9,12 @@
 [![Github All
 Releases](https://img.shields.io/github/downloads/jvieroe/epinionDSB/total.svg)]()
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/jvieroe/epinionDSB/workflows/R-CMD-check/badge.svg)](https://github.com/jvieroe/epinionDSB/actions)
 [![License: GPL
 (\>= 3)](https://img.shields.io/badge/license-GPL%20\(%3E=%203\)-blue.svg)](https://cran.r-project.org/web/licenses/GPL%20\(%3E=%203\))
+[![](https://img.shields.io/github/last-commit/jvieroe/epinionDSB.svg)](https://github.com/jvieroe/epinionDSB/commits/main)
+
+Master branch status:
+[![R-CMD-check](https://github.com/jvieroe/epinionDSB/workflows/R-CMD-check/badge.svg)](https://github.com/jvieroe/epinionDSB/actions)
 <!-- badges: end -->
 
 The goal of `epinionDSB` is to provide easy-to-use templates for
