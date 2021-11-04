@@ -44,13 +44,14 @@ library(tidyverse)
 library(epinionDSB)
 
 ggplot(mtcars, aes(x = wt,
-                   y = mpg,
-                   color = factor(am))) +
-  geom_point(size = 4) +
+                   y = mpg)) +
+  geom_point(aes(color = factor(am)),
+             size = 4) +
+  geom_smooth(method = "lm", se = F, color = "black") +
   facet_wrap(~ vs) +
   # dsb_theme_dust(background = "yes") 
   # theme(strip.background = element_rect(color = "transparent"))
-  dsb_theme_classic()
+  dsb_theme_classic(gridlines = "both")
 
 
 ```
