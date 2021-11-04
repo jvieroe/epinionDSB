@@ -67,6 +67,7 @@ ggplot(mtcars, aes(x = wt,
   dsb_theme_dust(background = "yes") 
   theme(strip.background = element_rect(color = "transparent"))
   dsb_theme_classic()
+  
 
 ```
 
