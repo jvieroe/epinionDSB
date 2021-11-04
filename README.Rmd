@@ -55,7 +55,7 @@ library(tidyverse)
 library(epinionDSB)
 ```
 
-The ```dsb_style()``` function does not impact the ```aes()``` of your ```geom_*()```, only the ```ggplot2::theme()```. The only argument taken by ```dsb_style``` (at the time of writing) is the ```legend``` option specifying whether a legend is included and defaulting to ```TRUE``` (with ```legend.position``` defaulting to ```"right"```).
+The ```dsb_theme_classic()``` function does not impact the ```aes()``` of your ```geom_*()```, only the ```ggplot2::theme()```. The only argument taken by ```dsb_style``` (at the time of writing) is the ```legend``` option specifying whether a legend is included and defaulting to ```TRUE``` (with ```legend.position``` defaulting to ```"right"```).
 
 
 ```{r cars}
@@ -64,6 +64,8 @@ ggplot(mtcars, aes(x = wt,
                    color = factor(am))) +
   geom_point(size = 4) +
   facet_wrap(~ vs) +
+  dsb_theme_dust(background = "yes") 
+  theme(strip.background = element_rect(color = "transparent"))
   dsb_theme_classic()
 
 ```
