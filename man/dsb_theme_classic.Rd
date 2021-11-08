@@ -4,7 +4,7 @@
 \alias{dsb_theme_classic}
 \title{Apply a DSB styled theme to your \code{ggplot2} graphics}
 \usage{
-dsb_theme_classic(legend = TRUE, gridlines = "none", textcolor = "DarkBlue")
+dsb_theme_classic(legend = TRUE, gridlines = "both", textcolor = "DarkBlue")
 }
 \arguments{
 \item{legend}{a logical value indicating whether a legend is included. Defaults to \code{TRUE} (with \code{legend.position} defaulting to \code{"bottom"})}

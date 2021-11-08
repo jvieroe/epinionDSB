@@ -77,10 +77,8 @@ Choose between three themes:
     `dsb_theme_classic()` but with a warmer, dusty feel
       - arguments: `legend`, `gridlines`, `textcolor`, `background`
 
-The `dsb_theme_*()` functions do not impact the `aes()` of your plot,
-only the `ggplot2::theme()` elements. Note that all `ggplot2::theme()`
-settings inherent in `dsb_theme*()` can be overwritten by adding
-`theme(...)` elements after.
+Note that all `ggplot2::theme()` settings inherent in `dsb_theme*()` can
+be overwritten by adding `theme(...)` elements after.
 
 ``` r
 ggplot(mtcars, aes(x = wt,
@@ -92,6 +90,9 @@ ggplot(mtcars, aes(x = wt,
 ```
 
 <img src="man/figures/README-cars2-1.png" width="75%" style="display: block; margin: auto;" />
+
+The `dsb_theme_*()` functions do not impact the aesthetics of your plot
+(e.g. color scales), only the `ggplot2::theme()` elements.
 
 <!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>. -->
 
@@ -124,18 +125,20 @@ dsb_colvec("DSB Red", "DSB DarkBlue")
 #>    "#B41730"    "#00233C"
 ```
 
-We can use these in our `ggplot2` syntax by using the HEX codes or, more
-elegantly, by using the `base::getElement()` function:
+We can use these to manually change our colors by either (1) using the
+HEX codes provided by `epinion::dsb_colvec()` directly or (2) by pasting
+the names into the `epinionDSB::grabcol()` function. Both functions only
+accept colors in the Epinion color palette as inputs but are not
+sensitive to the inclusion of the Epinion prefix:
 
 ``` r
 ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
   geom_point(size = 4) +
-  dsb_theme_classic() +
-  scale_colour_manual(values = c(getElement(dsb_colvec(), "DSB Red"), 
-                                 getElement(dsb_colvec(), "DSB DarkBlue"))) +
-  theme(legend.position = "none")
+  dsb_theme_dust(legend = FALSE) +
+  scale_colour_manual(values = c(grabcol("DSB Red"), 
+                                 grabcol("DarkBlue")))
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="75%" style="display: block; margin: auto;" />
@@ -145,7 +148,7 @@ ggplot(mtcars, aes(x = wt,
 To provide a more verbose alternative, `epinionDSB` contains
 out-of-the-box functions to provide our `ggplot2` figures with the DSB
 color palette. These functions apply to both discrete and continuous
-variable mapping:
+variable mapping and for both `aes(color = )` and `aes(fill = )`:
 
 **Discrete variables**
 
@@ -161,29 +164,37 @@ variable mapping:
   - `fill_dsb_c`: to use with the `aes(fill = x)`, where x is a
     `numeric` or `integer` variable
 
-**Let’s check it out\!**
+The main argument taken by all four functions is `reverse` which allows
+you to reverse the order of the color scale (default is `FALSE`).
+
+#### Additional arguments: `*_dsb_d()`
+
+  - When mapping `color_dsb_d()` or `fill_dsb_d()` to a variable with
+    **only two levels**, you can manually choose colors with the
+    `primary` and `secondary` arguments. As with `epinionDSB::grabcol()`
+    colors can be specified with or without the DSB prefix
+
+<!-- end list -->
 
 ``` r
-
-# discrete variable in aes()
 p1 <-
   ggplot(mtcars, aes(x = wt,
                      y = mpg,
                      color = factor(am))) +
   geom_point(size = 4) +
-  dsb_theme_classic(gridlines = "both") +
-  theme(legend.position = "right") +
-  color_dsb_d()
+  dsb_theme_classic(legend = FALSE) +
+  color_dsb_d(primary = "DSB Red",
+              secondary = "DSB Orange")
 
-# continuous variable in aes()
 p2 <-
   ggplot(mtcars, aes(x = wt,
                      y = mpg,
-                     color = disp)) +
+                     color = factor(am))) +
   geom_point(size = 4) +
-  dsb_theme_dust() +
-  theme(legend.position = "right") +
-  color_dsb_c()
+  dsb_theme_classic(legend = FALSE) +
+  color_dsb_d(primary = "Red",
+              secondary = "Orange")
+
 
 library(patchwork)
 p1 / p2
@@ -191,11 +202,14 @@ p1 / p2
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="75%" style="display: block; margin: auto;" />
 
-The main argument taken by all four functions is `reverse` which allows
-you to reverse the order of the color scale (default is `FALSE`).
-Furthermore, `*_dsb_c()` allows you to select from a range of color
-palettes: `reds`, `greens`, `blues`, and `teals`. You choose between
-these with the `palette` option in `color_dsb_c()` and `fill_dsb_c()`.
+#### Additional arguments: `*_epi_c()`
+
+  - `epinionDSB` contains four different continuous color palettes:
+    `reds`, `greens`, `blues`, and `teals`.
+  - You choose between these with the `palette` option in
+    `color_dsb_c()` and `fill_dsb_c()`
+
+<!-- end list -->
 
 ``` r
 # continuous variable in aes()
@@ -204,7 +218,7 @@ p1 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = "yes") +
+  dsb_theme_dust(background = TRUE) +
   theme(legend.position = "right") +
   color_dsb_c(palette = "greens")
 
@@ -213,7 +227,7 @@ p2 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = "yes") +
+  dsb_theme_dust(background = TRUE) +
   theme(legend.position = "right") +
   color_dsb_c(palette = "greens",
               reverse = TRUE)
@@ -223,28 +237,30 @@ p3 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = "yes") +
+  dsb_theme_dust(background = TRUE) +
   theme(legend.position = "right") +
-  color_dsb_c(palette = "blues")
+  color_dsb_c(palette = "reds")
 
 p4 <- 
   ggplot(mtcars, aes(x = wt,
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = "yes") +
+  dsb_theme_dust(background = TRUE) +
   theme(legend.position = "right") +
-  color_dsb_c(palette = "blues",
+  color_dsb_c(palette = "reds",
               reverse = TRUE)
 
 
 library(patchwork)
+library(repinion)
+
 (p1 + p2) /
   (p3 + p4) + 
   plot_annotation(theme = 
                     theme(plot.background = 
                             element_rect(color = NA,
-                                         fill = "#E8E1D5",
+                                         fill = repinion::grabcol("Epinion WarmSand"),
                                          )
                           )
                   )

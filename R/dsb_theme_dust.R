@@ -53,7 +53,7 @@ dsb_theme_dust <- function(legend = TRUE,
 
   } else if (textcolor != "black") {
 
-    theme_textcolor <- theme_textcolor <- epinionDSB::grabcol(textcolor)
+    theme_textcolor <- theme_textcolor <- epinionDSB::dsb_grabcol(textcolor)
 
   }
 

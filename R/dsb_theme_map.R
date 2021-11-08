@@ -46,7 +46,7 @@ dsb_theme_map <- function(legend = TRUE,
 
   } else if (textcolor != "black") {
 
-    theme_textcolor <- epinionDSB::grabcol(textcolor)
+    theme_textcolor <- epinionDSB::dsb_grabcol(textcolor)
 
   }
 
@@ -56,7 +56,7 @@ dsb_theme_map <- function(legend = TRUE,
                                              face = "plain",
                                              size = 12),
                    strip.background = element_rect(color = "black",
-                                                   fill = scales::alpha(epinionDSB::grabcol("DSB LightGrey"), 0.4)),
+                                                   fill = scales::alpha(epinionDSB::dsb_grabcol("DSB LightGrey"), 0.4)),
                    plot.title = element_text(colour = theme_textcolor,
                                              face = "bold",
                                              size = 18),
