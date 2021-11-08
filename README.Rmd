@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 #knitr::opts_chunk$set(fig.width=12, fig.height=8) 
 ```
 
-# epinionDSB
+# epinionDSB <img src='man/figures/logo.svg' align="right" height="189" />
 
 <!-- badges: start -->
 [![CodeFactor](https://www.codefactor.io/repository/github/jvieroe/epiniondsb/badge)](https://www.codefactor.io/repository/github/jvieroe/epiniondsb)
