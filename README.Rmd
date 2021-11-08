@@ -86,7 +86,7 @@ ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
   geom_point(size = 4) +
-  dsb_theme_classic() +
+  dsb_theme_classic(gridlines = "none") +
   theme(legend.position = "right")
 
 ```
@@ -188,8 +188,8 @@ p1 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = TRUE) +
-  theme(legend.position = "right") +
+  dsb_theme_dust(background = TRUE,
+                 legend = FALSE) +
   color_dsb_c(palette = "greens")
 
 p2 <- 
@@ -197,8 +197,8 @@ p2 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = TRUE) +
-  theme(legend.position = "right") +
+  dsb_theme_dust(background = TRUE,
+                 legend = FALSE) +
   color_dsb_c(palette = "greens",
               reverse = TRUE)
 
@@ -207,8 +207,8 @@ p3 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = TRUE) +
-  theme(legend.position = "right") +
+  dsb_theme_dust(background = TRUE,
+                 legend = FALSE) +
   color_dsb_c(palette = "reds")
 
 p4 <- 
@@ -216,8 +216,8 @@ p4 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = TRUE) +
-  theme(legend.position = "right") +
+  dsb_theme_dust(background = TRUE,
+                 legend = FALSE) +
   color_dsb_c(palette = "reds",
               reverse = TRUE)
 

@@ -85,7 +85,7 @@ ggplot(mtcars, aes(x = wt,
                    y = mpg,
                    color = factor(am))) +
   geom_point(size = 4) +
-  dsb_theme_classic() +
+  dsb_theme_classic(gridlines = "none") +
   theme(legend.position = "right")
 ```
 
@@ -127,8 +127,8 @@ dsb_colvec("DSB Red", "DSB DarkBlue")
 
 We can use these to manually change our colors by either (1) using the
 HEX codes provided by `epinion::dsb_colvec()` directly or (2) by pasting
-the names into the `epinionDSB::grabcol()` function. Both functions only
-accept colors in the Epinion color palette as inputs but are not
+the names into the `epinionDSB::dsb_grabcol()` function. Both functions
+only accept colors in the Epinion color palette as inputs but are not
 sensitive to the inclusion of the Epinion prefix:
 
 ``` r
@@ -137,8 +137,8 @@ ggplot(mtcars, aes(x = wt,
                    color = factor(am))) +
   geom_point(size = 4) +
   dsb_theme_dust(legend = FALSE) +
-  scale_colour_manual(values = c(grabcol("DSB Red"), 
-                                 grabcol("DarkBlue")))
+  scale_colour_manual(values = c(dsb_grabcol("DSB Red"), 
+                                 dsb_grabcol("DarkBlue")))
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="75%" style="display: block; margin: auto;" />
@@ -171,8 +171,9 @@ you to reverse the order of the color scale (default is `FALSE`).
 
   - When mapping `color_dsb_d()` or `fill_dsb_d()` to a variable with
     **only two levels**, you can manually choose colors with the
-    `primary` and `secondary` arguments. As with `epinionDSB::grabcol()`
-    colors can be specified with or without the DSB prefix
+    `primary` and `secondary` arguments. As with
+    `epinionDSB::dsb_grabcol()` colors can be specified with or without
+    the DSB prefix
 
 <!-- end list -->
 
@@ -218,8 +219,8 @@ p1 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = TRUE) +
-  theme(legend.position = "right") +
+  dsb_theme_dust(background = TRUE,
+                 legend = FALSE) +
   color_dsb_c(palette = "greens")
 
 p2 <- 
@@ -227,8 +228,8 @@ p2 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = TRUE) +
-  theme(legend.position = "right") +
+  dsb_theme_dust(background = TRUE,
+                 legend = FALSE) +
   color_dsb_c(palette = "greens",
               reverse = TRUE)
 
@@ -237,8 +238,8 @@ p3 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = TRUE) +
-  theme(legend.position = "right") +
+  dsb_theme_dust(background = TRUE,
+                 legend = FALSE) +
   color_dsb_c(palette = "reds")
 
 p4 <- 
@@ -246,8 +247,8 @@ p4 <-
                          y = mpg,
                          color = disp)) +
   geom_point(size = 4) +
-  dsb_theme_dust(background = TRUE) +
-  theme(legend.position = "right") +
+  dsb_theme_dust(background = TRUE,
+                 legend = FALSE) +
   color_dsb_c(palette = "reds",
               reverse = TRUE)
 
