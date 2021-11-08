@@ -103,7 +103,7 @@ The ```dsb_theme_*()``` functions do not impact the aesthetics of your plot (e.g
 
 You can apply DSB themed colors with `epinionDSB`. Choose between the following approaches:
 
-### Extract HEX codes using `dsb_colvec()`
+### Extract HEX codes using `dsb_colvec()` or `dsb_grabcol()`
 The `epinionDSB` package provides access to the color palette in the DSB design manual. Specifically, the ```dsb_colvec()``` function extracts HEX codes by the color names.
 
 ```{r warning=F, message=F}
@@ -114,7 +114,7 @@ dsb_colvec()
 dsb_colvec("DSB Red", "DSB DarkBlue")
 ```
 
-We can use these to manually change our colors by either (1) using the HEX codes provided by `epinion::dsb_colvec()` directly or (2) by pasting the names into the `epinionDSB::dsb_grabcol()` function. Both functions only accept colors in the Epinion color palette as inputs but are not sensitive to the inclusion of the Epinion prefix:
+We can use these to manually change our colors by either (1) using the HEX codes provided by `epinion::dsb_colvec()` directly or (2) by pasting the names into the `epinionDSB::dsb_grabcol()` function. Both functions only accept colors in the Epinion color palette as inputs but the latter is not sensitive to the inclusion of the Epinion prefix:
 
 ```{r warning=F, message=F}
 ggplot(mtcars, aes(x = wt,
