@@ -16,6 +16,26 @@
 dsb_theme_map <- function(legend = TRUE,
                           textcolor = "DarkBlue") {
 
+  if (textcolor == "black") {
+
+    textcolor <- "black"
+
+  } else if (textcolor != "black") {
+
+    textcolor <- textcolor
+
+    if (base::grepl("DSB ", textcolor) == TRUE) {
+
+      textcolor <- textcolor
+
+    } else if (base::grepl("DSB ", textcolor) == FALSE) {
+
+      textcolor <- paste0("DSB ", textcolor)
+
+    }
+
+  }
+
   check_theme_map(legend = legend,
                   textcolor = textcolor)
 
@@ -26,8 +46,7 @@ dsb_theme_map <- function(legend = TRUE,
 
   } else if (textcolor != "black") {
 
-    theme_textcolor <- getElement(epinionDSB::dsb_colvec(), paste0("DSB ",
-                                                                    textcolor))
+    theme_textcolor <- epinionDSB::grabcol(textcolor)
 
   }
 
@@ -37,7 +56,7 @@ dsb_theme_map <- function(legend = TRUE,
                                              face = "plain",
                                              size = 12),
                    strip.background = element_rect(color = "black",
-                                                   fill = scales::alpha(getElement(epinionDSB::dsb_colvec(), "DSB LightGrey"), 0.4)),
+                                                   fill = scales::alpha(epinionDSB::grabcol("DSB LightGrey"), 0.4)),
                    plot.title = element_text(colour = theme_textcolor,
                                              face = "bold",
                                              size = 18),

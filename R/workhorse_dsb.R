@@ -27,8 +27,8 @@ check_theme <- function(legend,
     stop("Invalid 'gridlines' argument provided. Must be either 'both', 'none', 'x', or 'y'")
   }
 
-  if(!paste0("DSB ", textcolor) %in% c(names(epinionDSB::dsb_cols), "DSB black")) {
-    stop("Invalid 'textcolor' argument provided. Must be either 'black' or one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+  if(!textcolor %in% c(names(epinionDSB::dsb_cols), "black")) {
+    stop("Invalid 'textcolor' argument provided. Must be either 'black' or one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
   }
 
 }
@@ -41,8 +41,8 @@ check_theme_map <- function(legend,
     stop("Invalid 'legend' argument provided. Must be logical")
   }
 
-  if(!paste0("DSB ", textcolor) %in% c(names(epinionDSB::dsb_cols), "DSB black")) {
-    stop("Invalid 'textcolor' argument provided. Must be either 'black' or one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+  if(!textcolor %in% c(names(epinionDSB::dsb_cols), "black")) {
+    stop("Invalid 'textcolor' argument provided. Must be either 'black' or one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
   }
 
 }
@@ -61,12 +61,12 @@ check_theme_dust <- function(legend,
     stop("Invalid 'gridlines' argument provided. Must be either 'both', 'none', 'x', or 'y'")
   }
 
-  if(!paste0("DSB ", textcolor) %in% c(names(epinionDSB::dsb_cols), "DSB black")) {
-    stop("Invalid 'textcolor' argument provided. Must be either 'black' or one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+  if(!textcolor %in% c(names(epinionDSB::dsb_cols), "black")) {
+    stop("Invalid 'textcolor' argument provided. Must be either 'black' or one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
   }
 
-  if(!background %in% c("no", "yes")) {
-    stop("Invalid 'background' argument provided. Must be 'no' or 'yes'")
+  if(!background %in% c(TRUE, FALSE)) {
+    stop("Invalid 'background' argument provided. Must be TRUE or FALSE")
   }
 
 }
@@ -81,12 +81,12 @@ check_col_d <- function(primary,
     stop("Invalid 'reverse' argument provided. Must be logical")
   }
 
-  if(!is.null(primary) && !paste0("DSB ", primary) %in% names(epinionDSB::dsb_cols)) {
-    stop("Provided 'primary' color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+  if(!is.null(primary) && !primary %in% names(epinionDSB::dsb_cols)) {
+    stop("Provided 'primary' color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
   }
 
-  if(!is.null(secondary) && !paste0("DSB ", secondary) %in% names(epinionDSB::dsb_cols)) {
-    stop("Provided 'secondary' color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+  if(!is.null(secondary) && !secondary %in% names(epinionDSB::dsb_cols)) {
+    stop("Provided 'secondary' color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
   }
 
 }
@@ -96,6 +96,35 @@ dsb_pal_d <- function(palette = "main",
                       primary = NULL,
                       secondary = NULL,
                       reverse = FALSE) {
+
+  if (!is.null(primary)) {
+
+    if (base::grepl("DSB ", primary) == TRUE) {
+
+      primary <- primary
+
+    } else if (base::grepl("DSB ", primary) == FALSE) {
+
+      primary <- paste0("DSB ", primary)
+
+    }
+
+  }
+
+  if (!is.null(secondary)) {
+
+    if (base::grepl("DSB ", secondary) == TRUE) {
+
+      secondary <- secondary
+
+    } else if (base::grepl("DSB ", secondary) == FALSE) {
+
+      secondary <- paste0("DSB ", secondary)
+
+    }
+
+  }
+
 
   check_col_d(primary = primary,
               secondary = secondary,
@@ -122,16 +151,16 @@ dsb_pal_d <- function(palette = "main",
 
       if (secondary == primary) warning("Same color applied to both primary and secondary category")
 
-      if (!paste0("DSB ", primary) %in% names(pal)) {
-        stop("Provided primary color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+      if (!primary %in% names(pal)) {
+        stop("Provided primary color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
       }
 
-      if (!paste0("DSB ", secondary) %in% names(pal)) {
-        stop("Provided secondary color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+      if (!secondary %in% names(pal)) {
+        stop("Provided secondary color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
       }
 
-      primary <- paste0("DSB ", primary)
-      secondary <- paste0("DSB ", secondary)
+      # primary <- paste0("DSB ", primary)
+      # secondary <- paste0("DSB ", secondary)
 
       secondary <- if (!secondary %in% names(pal)) {
 
@@ -170,6 +199,17 @@ dsb_pal_d <- function(palette = "main",
 
 
 #' @noRd
+check_color_grab <- function(color) {
+
+  if(!color %in% names(epinionDSB::dsb_cols)) {
+    stop("Invalid color provided. Must be one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
+  }
+
+}
+
+
+
+#' @noRd
 check_primary_secondary <- function(primary,
                                     secondary,
                                     pal = pal) {
@@ -180,12 +220,12 @@ check_primary_secondary <- function(primary,
 
   if (secondary == primary) warning("Same color applied to both primary and secondary category")
 
-  if (!paste0("DSB ", primary) %in% names(pal)) {
-    stop("Provided primary color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+  if (!primary %in% names(pal)) {
+    stop("Provided primary color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
   }
 
-  if (!paste0("DSB ", secondary) %in% names(pal)) {
-    stop("Provided secondary color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (without DSB prefix)")
+  if (!secondary %in% names(pal)) {
+    stop("Provided secondary color is not in the DSB color palette. Must be one of names(epinionDSB::dsb_cols) (with or without DSB prefix)")
   }
 
 }
