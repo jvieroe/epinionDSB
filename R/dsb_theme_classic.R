@@ -3,7 +3,7 @@
 #' This function applies a theme consistent with the DSB Corporate Visual Identity (CVI) to your `ggplot2` graphics. Add it to your `ggplot2` syntax for conistent visual outputs.
 #' @param legend a logical value indicating whether a legend is included. Defaults to `TRUE` (with `legend.position` defaulting to `"bottom"`)
 #' @param gridlines Include gridlines? Options are `"both"`, `"none"`, `"x"` (for vertical), and `"y"` (for horizontal). Default is `"both"`
-#' @param textcolor Color for text elements in `theme()` options. Must be either "black" or a named color from the DSB color palette (see \link[epinionDSB]{dsb_colvec}), with or without the `"Epinion"` prefix. Default is "DarkBlue"
+#' @param textcolor Color for text elements in `theme()` options. Must be either "black" or a named color from the DSB color palette (see \link[epinionDSB]{dsb_colvec}), with or without the `"DSB"` prefix. Default is "DarkBlue"
 #' @return a CVI compliant plot
 #' @examples
 #' library(tidyverse)

@@ -9,7 +9,7 @@ dsb_theme_map(legend = TRUE, textcolor = "DarkBlue")
 \arguments{
 \item{legend}{a logical value indicating whether a legend is included. Defaults to \code{TRUE} (with \code{legend.position} defaulting to \code{"bottom"})}
 
-\item{textcolor}{Color for text elements in \code{theme()} options. Must be either "black" or a named color from the DSB color palette (see \link[epinionDSB]{dsb_colvec}), with or without the \code{"Epinion"} prefix. Default is "DarkBlue"}
+\item{textcolor}{Color for text elements in \code{theme()} options. Must be either "black" or a named color from the DSB color palette (see \link[epinionDSB]{dsb_colvec}), with or without the \code{"DSB"} prefix. Default is "DarkBlue"}
 }
 \value{
 a CVI compliant plot

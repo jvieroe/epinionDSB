@@ -16,7 +16,7 @@ dsb_theme_dust(
 
 \item{gridlines}{Include gridlines? Options are \code{"both"}, \code{"none"}, \code{"x"} (for vertical), and \code{"y"} (for horizontal). Default is \code{"both"}}
 
-\item{textcolor}{Color for text elements in \code{theme()} options. Must be either "black" or a named color from the DSB color palette (see \link[epinionDSB]{dsb_colvec}), with or without the \code{"Epinion"} prefix. Default is "DarkBlue"}
+\item{textcolor}{Color for text elements in \code{theme()} options. Must be either "black" or a named color from the DSB color palette (see \link[epinionDSB]{dsb_colvec}), with or without the \code{"DSB"} prefix. Default is "DarkBlue"}
 
 \item{background}{A logical value. Apply the WarmSand color to plot background? Default is FALSE}
 }
