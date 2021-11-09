@@ -79,7 +79,7 @@ Choose between three themes:
 * `dsb_theme_dust()`, to a large degree similar to `dsb_theme_classic()` but with a warmer, dusty feel
   + arguments: `legend`, `gridlines`, `textcolor`, `background`
 
-Note that all `ggplot2::theme()` settings inherent in `dsb_theme*()` can be overwritten by adding `theme(...)` elements after.
+Note that all `ggplot2::theme()` settings inherent in `dsb_theme*()` can be overwritten by adding `theme(...)` elements afterwards.
 
 ```{r cars2}
 ggplot(mtcars, aes(x = wt,

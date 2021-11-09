@@ -78,7 +78,7 @@ Choose between three themes:
       - arguments: `legend`, `gridlines`, `textcolor`, `background`
 
 Note that all `ggplot2::theme()` settings inherent in `dsb_theme*()` can
-be overwritten by adding `theme(...)` elements after.
+be overwritten by adding `theme(...)` elements afterwards.
 
 ``` r
 ggplot(mtcars, aes(x = wt,
