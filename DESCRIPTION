@@ -1,5 +1,5 @@
 Package: epinionDSB
-Title: What the Package Does (One Line, Title Case)
+Title: create DSB styled ggplots
 Version: 0.1.0
 Authors@R: 
     person(given = "Jeppe",
