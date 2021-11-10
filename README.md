@@ -9,14 +9,15 @@
 [![Github All
 Releases](https://img.shields.io/github/downloads/jvieroe/epinionDSB/total.svg)]()
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![License: GPL
-(\>= 3)](https://img.shields.io/badge/license-GPL%20\(%3E=%203\)-blue.svg)](https://cran.r-project.org/web/licenses/GPL%20\(%3E=%203\))
+[![License: GPL (>=
+3)](https://img.shields.io/badge/license-GPL%20(%3E=%203)-blue.svg)](https://cran.r-project.org/web/licenses/GPL%20(%3E=%203))
 [![](https://img.shields.io/github/last-commit/jvieroe/epinionDSB.svg)](https://github.com/jvieroe/epinionDSB/commits/main)
 [![Travis build
 status](https://travis-ci.org/jvieroe/epinionDSB.svg?branch=main)](https://travis-ci.org/jvieroe/epinionDSB)
 
 Master branch status:
 [![R-CMD-check](https://github.com/jvieroe/epinionDSB/workflows/R-CMD-check/badge.svg)](https://github.com/jvieroe/epinionDSB/actions)
+[![](https://img.shields.io/badge/devel%20version-0.1.0-dodgerblue3.svg)](https://github.com/https://github.com/jvieroe/epinionDSB)
 <!-- badges: end -->
 
 # Introduction
@@ -68,14 +69,14 @@ time-saver when producing several plots.
 
 Choose between three themes:
 
-  - `dsb_theme_classic()`, designed for most visualization purposes
-      - arguments: `legend`, `gridlines`, `textcolor`
-  - `dsb_theme_map()`, a very minimalist theme designed with geospatial
+-   `dsb_theme_classic()`, designed for most visualization purposes
+    -   arguments: `legend`, `gridlines`, `textcolor`
+-   `dsb_theme_map()`, a very minimalist theme designed with geospatial
     maps in mind
-      - arguments: `legend`, `textcolor`
-  - `dsb_theme_dust()`, to a large degree similar to
+    -   arguments: `legend`, `textcolor`
+-   `dsb_theme_dust()`, to a large degree similar to
     `dsb_theme_classic()` but with a warmer, dusty feel
-      - arguments: `legend`, `gridlines`, `textcolor`, `background`
+    -   arguments: `legend`, `gridlines`, `textcolor`, `background`
 
 Note that all `ggplot2::theme()` settings inherent in `dsb_theme*()` can
 be overwritten by adding `theme(...)` elements afterwards.
@@ -95,7 +96,6 @@ The `dsb_theme_*()` functions do not impact the aesthetics of your plot
 (e.g. color scales), only the `ggplot2::theme()` elements.
 
 <!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>. -->
-
 <!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN. -->
 
 ## DSB color palettes
@@ -152,16 +152,16 @@ variable mapping and for both `aes(color = )` and `aes(fill = )`:
 
 **Discrete variables**
 
-  - `color_dsb_d`: to use with the `aes(color = x)`, where x is a
+-   `color_dsb_d`: to use with the `aes(color = x)`, where x is a
     `factor` or `character` variable
-  - `fill_dsb_d`: to use with the `aes(fill = x)`, where x is a `factor`
+-   `fill_dsb_d`: to use with the `aes(fill = x)`, where x is a `factor`
     or `character` variable
 
 **Continuous variables**
 
-  - `color_dsb_c`: to use with the `aes(color = x)`, where x is a
+-   `color_dsb_c`: to use with the `aes(color = x)`, where x is a
     `numeric` or `integer` variable
-  - `fill_dsb_c`: to use with the `aes(fill = x)`, where x is a
+-   `fill_dsb_c`: to use with the `aes(fill = x)`, where x is a
     `numeric` or `integer` variable
 
 The main argument taken by all four functions is `reverse` which allows
@@ -169,13 +169,11 @@ you to reverse the order of the color scale (default is `FALSE`).
 
 #### Additional arguments: `*_dsb_d()`
 
-  - When mapping `color_dsb_d()` or `fill_dsb_d()` to a variable with
+-   When mapping `color_dsb_d()` or `fill_dsb_d()` to a variable with
     **only two levels**, you can manually choose colors with the
     `primary` and `secondary` arguments. As with
     `epinionDSB::dsb_grabcol()` colors can be specified with or without
     the DSB prefix
-
-<!-- end list -->
 
 ``` r
 p1 <-
@@ -205,12 +203,10 @@ p1 / p2
 
 #### Additional arguments: `*_epi_c()`
 
-  - `epinionDSB` contains four different continuous color palettes:
+-   `epinionDSB` contains four different continuous color palettes:
     `reds`, `greens`, `blues`, and `teals`.
-  - You choose between these with the `palette` option in
+-   You choose between these with the `palette` option in
     `color_dsb_c()` and `fill_dsb_c()`
-
-<!-- end list -->
 
 ``` r
 # continuous variable in aes()
@@ -271,7 +267,7 @@ library(repinion)
 
 #### Additional arguments: `*_dsb_d()`
 
-  - When mapping `color_dsb_d()` or `fill_dsb_d()` to a variable with
+-   When mapping `color_dsb_d()` or `fill_dsb_d()` to a variable with
     **only two levels**, you can manually choose colors with the
     `primary` and `secondary` arguments
 
@@ -288,12 +284,12 @@ for details on additional arguments.
 
 # Acknowledgements
 
-  - The R Core Team for developing and maintaining the language
-  - Hadley Wickham ([hadley](https://github.com/hadley)) and the rest of
+-   The R Core Team for developing and maintaining the language
+-   Hadley Wickham ([hadley](https://github.com/hadley)) and the rest of
     the team working on the amazing `ggplot2` package (and, frankly, the
     entire `tidyverse` ecosystem)
-  - Garrick Aden-Buie ([gadenbuie](https://github.com/gadenbuie)) and Dr
+-   Garrick Aden-Buie ([gadenbuie](https://github.com/gadenbuie)) and Dr
     Simon Jackson ([drsimonj](https://github.com/drsimonj)) for
     inspiration
-  - Steffen Bank ([steffenbank](https://github.com/steffenbank)) for
+-   Steffen Bank ([steffenbank](https://github.com/steffenbank)) for
     convincing me to finally try to write my own `R` package
