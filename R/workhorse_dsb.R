@@ -105,7 +105,7 @@ dsb_pal_d <- function(palette = "main",
 
     } else if (base::grepl("DSB ", primary) == FALSE) {
 
-      primary <- paste0("DSB ", primary)
+      primary <- base::paste0("DSB ", primary)
 
     }
 
@@ -119,7 +119,7 @@ dsb_pal_d <- function(palette = "main",
 
     } else if (base::grepl("DSB ", secondary) == FALSE) {
 
-      secondary <- paste0("DSB ", secondary)
+      secondary <- base::paste0("DSB ", secondary)
 
     }
 

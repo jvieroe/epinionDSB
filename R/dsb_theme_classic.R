@@ -32,7 +32,7 @@ dsb_theme_classic <- function(legend = TRUE,
 
     } else if (base::grepl("DSB ", textcolor) == FALSE) {
 
-      textcolor <- paste0("DSB ", textcolor)
+      textcolor <- base::paste0("DSB ", textcolor)
 
     }
 
