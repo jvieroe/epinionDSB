@@ -16,7 +16,7 @@ Releases](https://img.shields.io/github/downloads/jvieroe/epinionDSB/total.svg)]
 
 Master branch status:
 [![R-CMD-check](https://github.com/jvieroe/epinionDSB/workflows/R-CMD-check/badge.svg)](https://github.com/jvieroe/epinionDSB/actions)
-[![](https://img.shields.io/badge/devel%20version-0.1.0-dodgerblue.svg)](https://github.com/https://github.com/jvieroe/epinionDSB)
+[![](https://img.shields.io/badge/devel%20version-0.1.1-dodgerblue.svg)](https://github.com/https://github.com/jvieroe/epinionDSB)
 <!-- badges: end -->
 
 # Introduction
