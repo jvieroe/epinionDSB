@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![CodeFactor](https://www.codefactor.io/repository/github/jvieroe/epiniondsb/badge)](https://www.codefactor.io/repository/github/jvieroe/epiniondsb)
+[![](https://codecov.io/gh/https://github.com/jvieroe/epinionDSB/branch/main/graph/badge.svg)](https://codecov.io/gh/https://github.com/jvieroe/epinionDSB)
 <!-- [![Github All Releases](https://img.shields.io/github/downloads/jvieroe/epinionDSB/total.svg)]() -->
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![License: GPL (>=
