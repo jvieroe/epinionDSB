@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![CodeFactor](https://www.codefactor.io/repository/github/jvieroe/epiniondsb/badge)](https://www.codefactor.io/repository/github/jvieroe/epiniondsb)
-[![](https://codecov.io/gh/https://github.com/jvieroe/epinionDSB/branch/main/graph/badge.svg?token=991e84fd-567a-4891-9285-e77ccb2564f9)](https://codecov.io/gh/https://github.com/jvieroe/epinionDSB)
+[![codecov](https://codecov.io/gh/jvieroe/epinionDSB/branch/main/graph/badge.svg?token=T9PXFX8SKB)](https://codecov.io/gh/jvieroe/epinionDSB)
 <!-- [![Github All Releases](https://img.shields.io/github/downloads/jvieroe/epinionDSB/total.svg)]() -->
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![License: GPL (>=
